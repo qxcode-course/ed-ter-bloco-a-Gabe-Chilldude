@@ -11,6 +11,7 @@ func main() {
 	}
 
 	for i:=0;i<n;i++{
+		fmt.Println(descasados[i])
 		if descasados[i] == 0 {
 			continue
 		}

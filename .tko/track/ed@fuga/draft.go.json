@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_10-53-21",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar h, p, f, d int\n\n\tfmt.Scan(&h)\n\tfmt.Scan(&p)\n\tfmt.Scan(&f)\n\tfmt.Scan(&d)\n\n\tif(d<0) {    // d horario\n\t\tif(p<h) {\n\t\t\tif(f>p) {\n\t\t\t\tif(f<h) {\n\t\t\t\t\tfmt.Println(\"N\")\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Println(\"S\")\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"S\")\n\t\t\t}\n\t\t} else {\n\t\t\tif(f>p) {\n\t\t\t\tfmt.Println(\"N\")\n\t\t\t} else {\n\t\t\t\tif(f<h) {\n\t\t\t\t\tfmt.Println(\"N\")\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Println(\"S\")\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t} else {         // d anti-horario\n\t\tif(p<h) {\n\t\t\tif(f>p) {\n\t\t\t\tfmt.Println(\"S\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"N\")\n\t\t\t}\n\t\t} else {\n\t\t\tif(f>p) {\n\t\t\t\tfmt.Println(\"S\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"N\")\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "lines": "48"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_10-54-02",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar n int\n\tvar casais int\n\tfmt.Scan(&n)\n\tvar descasados = make([]int, n)\n\n\tfor i:=0;i<n;i++{\n\t\tfmt.Scan(&descasados[i])\n\t}\n\n\tfor i:=0;i<n;i++{\n\t\tif descasados[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfor j:=0;j<n;j++{\n\t\t\tif descasados[j] == -(descasados[i]) {\n\t\t\t\tdescasados[j] = 0\n\t\t\t\tdescasados[i] = 0\n\t\t\t\tcasais ++\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Println(casais)\n}\n",
+            "lines": "27"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_10-50-59",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n\tvar a,b,c float64\n\tfmt.Scan(&a);\n\tfmt.Scan(&b);\n\tfmt.Scan(&c);\n\n\tvar p = (a+b+c) / 2\n\n\tvar res  = math.Sqrt(p*(p-a)*(p-b)*(p-c))\n\n\tfmt.Printf(\"%.2f\\n\",res)\n}\n",
+            "lines": "15"
+        }
+    ]
+}
