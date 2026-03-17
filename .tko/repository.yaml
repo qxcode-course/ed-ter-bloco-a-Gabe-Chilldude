@@ -20,7 +20,7 @@ tasks:
   ed@mumia: '{self:1, rate:100, study:20}'
   ed@fuga: '{self:1, rate:100, study:40}'
   ed@pedra: '{self:1, rate:100, study:40}'
-  ed@casais: '{rate:50}'
+  ed@casais: '{self:1, rate:100, study:30}'
 flags:
   painel: 0
   quests: 0
@@ -29,4 +29,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@casais
+selected: ed@baruel

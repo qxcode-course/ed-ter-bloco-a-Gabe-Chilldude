@@ -11,11 +11,13 @@ func main() {
 	}
 
 	for i:=0;i<n;i++{
-		fmt.Println(descasados[i])
 		if descasados[i] == 0 {
 			continue
 		}
 		for j:=0;j<n;j++{
+			if descasados[i] == 0 || descasados[j] == 0{
+				continue
+			}
 			if descasados[j] == -(descasados[i]) {
 				descasados[j] = 0
 				descasados[i] = 0
