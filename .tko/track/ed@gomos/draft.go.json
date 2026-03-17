@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_19-13-45",
+            "content": "@@ -437,18 +437,18 @@\n ra%5B0%5D.y \n---\n+++\n %0A%09case %22\n@@ -456,34 +456,34 @@\n %22:%0A%09%09cobra%5B0%5D.y \n-++\n+--\n %0A%09case %22L%22:%0A%09%09co\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-17_19-14-22",
+            "content": "package main\nimport \"fmt\"\n\ntype Gomo struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\tvar tam int\n\tvar dir string \n\tfmt.Scan(&tam)\n\tfmt.Scan(&dir)\n\n\tvar cobra = make([]Gomo, tam)\n\n\tfor i := 0; i < tam; i++ {\n\t\tfmt.Scan(&cobra[i].x)\n\t\tfmt.Scan(&cobra[i].y)\n\t}\n\n\tvar passado Gomo = cobra[0]\n\tfor i := 1; i < tam; i++ {\n\t\tvar temp Gomo = cobra[i]\n\t\tcobra[i].x = passado.x\n\t\tcobra[i].y = passado.y\n\t\tpassado = temp\n\t}\n\tswitch dir {\n\tcase \"U\":\n\t\tcobra[0].y --\n\tcase \"D\":\n\t\tcobra[0].y ++\n\tcase \"L\":\n\t\tcobra[0].x --\n\tcase \"R\":\n\t\tcobra[0].x ++\n\t\t\n\t}\n\n\tfor i := 0; i < tam; i++ {\n\t\tfmt.Printf(\"%d %d\\n\", cobra[i].x, cobra[i].y)\n\t}\n\n}\n",
+            "lines": "45"
+        }
+    ]
+}

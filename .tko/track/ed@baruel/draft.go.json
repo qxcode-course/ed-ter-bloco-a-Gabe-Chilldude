@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-56-33",
+            "content": "@@ -342,54 +342,14 @@\n s%5Bi%5D\n-)%0A%09%09%09if i!= baruel-1 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D\n+, %22 %22)\n %0A%09%09%7D\n@@ -486,42 +486,8 @@\n + %7B%0A\n-%09%09if i!=0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A\n %09%09if\n@@ -528,16 +528,21 @@\n pacos%5Bi%5D\n+, %22 %22\n )%0A%09%09%7D%0A%09%7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_17-00-58",
+            "content": "@@ -300,64 +300,74 @@\n %09if \n-i!=0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09if figs%5Bi%5D == figs%5Bi-1%5D\n+figs%5Bi%5D == figs%5Bi-1%5D%7B%0A%09%09%09fmt.Print(figs%5Bi%5D)%0A%09%09%09if i!= baruel-1 \n %7B%0A\n+%09\n %09%09%09f\n@@ -375,24 +375,25 @@\n t.Print(\n-figs%5Bi%5D)\n+%22 %22)%0A%09%09%09%7D\n %0A%09%09%7D%0A%09%09f\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_17-02-00",
+            "content": "@@ -299,17 +299,17 @@\n %09%09if i!=\n-1\n+0\n  %7B%0A%09%09%09fm\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_17-02-12",
+            "content": "@@ -295,36 +295,8 @@\n + %7B%0A\n-%09%09if figs%5Bi%5D == figs%5Bi-1%5D%7B%0A%09\n %09%09if\n@@ -325,16 +325,43 @@\n  %22)%0A%09%09%7D%0A\n+%09%09if figs%5Bi%5D == figs%5Bi-1%5D%7B%0A\n %09%09%09fmt.P\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_17-02-32",
+            "content": "@@ -516,32 +516,8 @@\n + %7B%0A\n-%09%09if espacos%5Bi%5D != 0 %7B%0A%09\n %09%09if\n@@ -524,17 +524,16 @@\n  i!=0 %7B%0A\n-%09\n %09%09%09fmt.P\n@@ -544,18 +544,40 @@\n (%22 %22)%0A%09%09\n-%09\n %7D\n+%0A%09%09if espacos%5Bi%5D != 0 %7B\n %0A%09%09%09fmt.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_17-02-46",
+            "content": "@@ -490,21 +490,8 @@\n );%0A%0A\n-%09a := false %0A\n %09for\n@@ -508,24 +508,24 @@\n vista;i++ %7B%0A\n+\n %09%09if espacos\n@@ -541,17 +541,20 @@\n %7B%0A%09%09%09if \n-a\n+i!=0\n  %7B%0A%09%09%09%09f\n@@ -568,24 +568,24 @@\n t(%22 %22)%0A%09%09%09%7D%0A\n+\n %09%09%09fmt.Print\n@@ -601,20 +601,8 @@\n i%5D)%0A\n-%09%09%09a = true%0A\n %09%09%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_17-04-52",
+            "content": "@@ -503,19 +503,8 @@\n se %0A\n-%09n := true%0A\n %09for\n@@ -625,51 +625,9 @@\n e%0A%09%09\n-%09n = false%0A%09%09%7D%0A%09%7D%0A%09if n %7B%0A%09%09fmt.Print(%22N%22);\n+%7D\n %0A%09%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-17_17-06-13",
+            "content": "@@ -168,27 +168,8 @@\n sta)\n-%0A%09var n bool = true\n %0A%0A%09f\n@@ -265,33 +265,33 @@\n i%5D)%0A%09%7D%0A%0A%09for i:=\n-0\n+1\n ;i%3Cbaruel; i++ %7B\n@@ -295,123 +295,8 @@\n + %7B%0A\n-%09%09for j:=1;j%3Crevista;j++ %7B%0A%09%09%09if espacos%5Bj%5D == figs%5Bi%5D %7B%0A%09%09%09%09espacos%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if i == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A\n %09%09if\n@@ -343,33 +343,32 @@\n mt.Print(%22 %22)%0A%09%09\n-%09\n %7D%0A%09%09%09fmt.Print(f\n@@ -381,51 +381,94 @@\n )%0A%09%09\n-%09n = false%0A%09%09%7D%0A%09%7D%0A%09if n %7B%0A%09%09fmt.Print(%22N%22);\n+%7D%0A%09%09for j:=1;j%3Crevista;j++ %7B%0A%09%09%09if espacos%5Bj%5D == figs%5Bi%5D %7B%0A%09%09%09%09espacos%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n@@ -502,16 +502,17 @@\n lse %0A%09n \n+:\n = true%0A%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-17_17-10-34",
+            "content": "@@ -198,17 +198,16 @@\n i:=0; i%3C\n-=\n revista;\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-17_17-11-09",
+            "content": "@@ -193,17 +193,17 @@\n %09for i:=\n-1\n+0\n ; i%3C=rev\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-17_17-11-20",
+            "content": "@@ -193,17 +193,17 @@\n %09for i:=\n-0\n+1\n ; i%3C=rev\n@@ -234,10 +234,8 @@\n  = i\n-+1\n %0A%09%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-17_17-11-33",
+            "content": "@@ -198,16 +198,17 @@\n i:=0; i%3C\n+=\n revista;\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-17_17-11-42",
+            "content": "@@ -321,17 +321,17 @@\n %09for j:=\n-0\n+1\n ;j%3Crevis\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-17_17-13-58",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar revista, baruel int\n\tfmt.Scan(&revista)\n\tfmt.Scan(&baruel)\n\tvar figs = make([]int, baruel)\n\tvar espacos = make([]int, revista)\n\tvar n bool = true\n\n\tfor i:=0; i<revista; i++ {\n\t\tespacos[i] = i+1\n\t}\n\tfor i:=0;i<baruel; i++ {\n\t\tfmt.Scan(&figs[i])\n\t}\n\n\tfor i:=0;i<baruel; i++ {\n\t\tfor j:=0;j<revista;j++ {\n\t\t\tif espacos[j] == figs[i] {\n\t\t\t\tespacos[j] = 0\n\t\t\t}\n\t\t}\n\t\tif i == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tif figs[i] == figs[i-1]{\n\t\t\tif i!=1 {\n\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(figs[i])\n\t\t\tn = false\n\t\t}\n\t}\n\tif n {\n\t\tfmt.Print(\"N\");\n\t}\n\tfmt.Print(\"\\n\");\n\n\ta := false \n\tn = true\n\tfor i:=0;i<revista;i++ {\n\t\tif espacos[i] != 0 {\n\t\t\tif a {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(espacos[i])\n\t\t\ta = true\n\t\t\tn = false\n\t\t}\n\t}\n\tif n {\n\t\tfmt.Print(\"N\");\n\t}\n\tfmt.Print(\"\\n\");\n\n}\n",
+            "lines": "57"
+        }
+    ]
+}
