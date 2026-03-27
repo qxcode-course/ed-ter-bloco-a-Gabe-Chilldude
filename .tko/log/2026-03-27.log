@@ -1,0 +1,42 @@
+2026-03-27 18:52:53, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-27 18:52:54, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-27 18:52:56, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-27 18:53:22, SELF, v:1, k:ed@princesa, self:1, rate:100, study:30
+2026-03-27 18:53:24, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-27 18:53:25, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-27 18:53:26, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-27 18:53:30, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-27 18:53:31, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:136
+2026-03-27 18:57:40, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:148
+2026-03-27 18:58:05, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:147
+2026-03-27 19:00:16, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:153
+2026-03-27 19:01:09, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:153
+2026-03-27 19:01:33, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:154
+2026-03-27 19:02:08, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:153
+2026-03-27 19:02:17, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:153
+2026-03-27 19:03:25, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:156
+2026-03-27 19:04:26, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:154
+2026-03-27 19:05:03, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:153
+2026-03-27 19:05:11, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:154
+2026-03-27 19:09:32, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:154
+2026-03-27 19:10:16, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:153
+2026-03-27 19:14:54, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:153
+2026-03-27 19:16:29, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:153
+2026-03-27 19:18:09, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:154
+2026-03-27 19:18:16, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:154
+2026-03-27 19:18:40, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:155
+2026-03-27 19:28:41, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:173
+2026-03-27 19:29:24, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:174
+2026-03-27 19:29:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:174
+2026-03-27 19:32:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:190
+2026-03-27 19:32:57, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:190
+2026-03-27 19:34:22, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:195
+2026-03-27 19:35:15, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:196
+2026-03-27 19:36:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:196
+2026-03-27 19:37:22, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:195
+2026-03-27 19:37:55, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:195
+2026-03-27 19:39:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:199, fail:COMP
+2026-03-27 19:40:06, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:198
+2026-03-27 19:41:00, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:197
+2026-03-27 19:41:03, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-27 19:41:47, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:60

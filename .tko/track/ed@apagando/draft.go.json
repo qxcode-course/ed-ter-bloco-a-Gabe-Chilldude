@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-25_21-31-01",
+            "content": "@@ -627,10 +627,9 @@\n f i \n-!=\n+%3C\n  (n-\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-25_21-31-52",
+            "content": "@@ -616,16 +616,37 @@\n Fim%5Bi%5D)%0A\n+%09%09if i != (n-m)-1 %7B%0A%09\n %09%09fmt.Pr\n@@ -654,16 +654,20 @@\n nt(%22 %22)%0A\n+%09%09%7D%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-25_21-32-04",
+            "content": "@@ -263,19 +263,18 @@\n ake(\n-map%5Bint%5Dint\n+%5B%5Dint, n-m\n )%0A%0A%09\n@@ -583,18 +583,11 @@\n i %3C \n-len(filaFi\n+(n-\n m); \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-25_22-13-08",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar n, m int\n\n\tfmt.Scan(&n)\n\tfilaInicio := make([]int, n)\n\tfor i:=0; i<n; i++ {\n\t\tfmt.Scan(&filaInicio[i])\n\t}\n\n\tfmt.Scan(&m)\n\tdesertores := make([]int, m)\n\tfor i:=0; i<m; i++ {\n\t\tfmt.Scan(&desertores[i])\n\t}\n\n\tfilaFim := make(map[int]int)\n\n\t// remover desertores do array original\n\n\tfilaContador := 0\n\tfor i:=0;i<n;i++ {\n\t\tsaiuDaFila := false\n\t\tfor j:=0;j<m;j++ {\n\t\t\tif filaInicio[i] == desertores[j] {\n\t\t\t\tsaiuDaFila = true\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t\tif !saiuDaFila {\n\t\t\tfilaFim[filaContador] = filaInicio[i]\n\t\t\tfilaContador ++ \n\t\t}\n\t}\n\n\tfor i:=0; i < len(filaFim); i++ {\n\t\tfmt.Print(filaFim[i])\n\t\tfmt.Print(\" \")\n\t}\n\tfmt.Print(\"\\n\")\n\n}\n",
+            "lines": "43"
+        }
+    ]
+}

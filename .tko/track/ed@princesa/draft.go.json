@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_14-57-04",
+            "content": "@@ -536,19 +536,8 @@\n )%7B %0A\n-%09%09prox = i%0A\n %09%09de\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-24_15-02-38",
+            "content": "package main\nimport \"fmt\"\n\nfunc descobrirProximoCircular(prox * int, n int) {\n\tif *prox == n-1 {\n\t\t*prox = 0\n\t} else {\n\t\t*prox = *prox+1\n\t}\n}\n\nfunc main() {\n\tvar n, m int\n\tfmt.Scan(&n)\n\tfmt.Scan(&m)\n\tm -= 1\n\n\n\troda := make([]int, n)\n\n\tfor i:=0; i<n; i++ {\n\t\troda[i] = i+1\n\t}\n\tfmt.Print(\"[ \")\n\tfor j:= 0; j<n; j++ {\n\t\tif roda[j] != 0 {\n\t\t\tif j == m {\n\t\t\t\tfmt.Print(roda[j], \"> \")\n\t\t\t} else {\n\t\t\t\tfmt.Print(roda[j], \" \")\n\t\t\t}\n\t\t}\n\t}\n\tfmt.Print(\"]\\n\")\n\n\tprox := 0\n\tloop := true\n\tmortos := 0\n\tfor i:=0; loop; descobrirProximoCircular(&i, n){ \n\t\tprox = i\n\t\tdescobrirProximoCircular(&prox, n)\n\t\tfor j := 6; roda[prox] == 0; j++ {\n\t\t\tdescobrirProximoCircular(&prox, n)\n\t\t}\n\t\tif roda[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tif roda[i] == roda[m] {\n\t\t\troda[prox] = 0\n\t\t\tdescobrirProximoCircular(&m, n)\n\t\t\tfor j := 6; roda[m] == 0; j++ {\n\t\t\t\tdescobrirProximoCircular(&m, n)\n\t\t\t}\n\t\t\tfmt.Print(\"[ \")\n\t\t\tfor j:= 0; j<n; j++ {\n\t\t\t\tif roda[j] != 0 {\n\t\t\t\t\tif j == m {\n\t\t\t\t\t\tfmt.Print(roda[j], \"> \")\n\t\t\t\t\t} else {\n\t\t\t\t\t\tfmt.Print(roda[j], \" \")\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tfmt.Print(\"]\\n\")\n\n\t\t\tfor j:= 0; j<n; j++ {\n\t\t\t\tif roda[j] == 0 {\n\t\t\t\t\tmortos ++\n\t\t\t\t}\n\t\t\t}\n\t\t\tloop = mortos != n-1\n\t\t\tmortos = 0 \n\t\t\t}\n\n\n\t}\n}\n",
+            "lines": "78"
+        }
+    ]
+}

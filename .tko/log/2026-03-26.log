@@ -1,0 +1,19 @@
+2026-03-26 07:48:18, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-03-26 07:50:57, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-26 07:50:59, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-26 08:13:50, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-26 08:13:51, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-26 19:50:09, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-26 19:50:11, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:123
+2026-03-26 19:50:25, EXEC, v:1, k:ed@manipulacao, mode:FREE
+2026-03-26 19:50:35, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-26 19:51:29, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-26 19:51:31, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-26 19:51:40, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28
+2026-03-26 19:51:44, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28
+2026-03-26 19:51:45, EXEC, v:1, k:ed@manipulacao, mode:LOCK, rate:0
+2026-03-26 19:51:46, EXEC, v:1, k:ed@manipulacao, mode:LOCK, rate:0
+2026-03-26 19:51:51, EXEC, v:1, k:ed@manipulacao, mode:LOCK, rate:0
+2026-03-26 19:51:53, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28
+2026-03-26 19:51:58, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28
+2026-03-26 19:52:21, MOVE, v:1, k:ed@manipulacao, mode:BACK
