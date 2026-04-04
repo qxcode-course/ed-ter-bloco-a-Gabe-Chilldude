@@ -10,7 +10,7 @@ func descobrirProximoCircular(prox * int, n int) {
 }
 
 func main() {
-	var n, m int
+	var n, m int // number e murderer
 	fmt.Scan(&n)
 	fmt.Scan(&m)
 	m -= 1
@@ -19,15 +19,17 @@ func main() {
 	roda := make([]int, n)
 
 	for i:=0; i<n; i++ {
-		roda[i] = i+1
+		roda[i] = i+1 // nao sabia o que era um append ainda
 	}
+
+	// interessante fazer esses prints como uma funcao em proximas atividades
 	fmt.Print("[ ")
-	for j:= 0; j<n; j++ {
-		if roda[j] != 0 {
-			if j == m {
-				fmt.Print(roda[j], "> ")
+	for i:= 0; i<n; i++ {
+		if roda[i] != 0 {
+			if i == m { 
+				fmt.Print(roda[i], "> ")
 			} else {
-				fmt.Print(roda[j], " ")
+				fmt.Print(roda[i], " ")
 			}
 		}
 	}

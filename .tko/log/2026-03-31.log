@@ -1,0 +1,30 @@
+2026-03-31 10:24:46, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 10:24:47, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:80
+2026-03-31 10:24:49, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-31 11:21:28, MOVE, v:1, k:ed@triangulo, mode:DOWN
+2026-03-31 11:21:31, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-03-31 11:21:32, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-03-31 11:22:21, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-03-31 11:35:00, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-03-31 11:35:07, MOVE, v:1, k:ed@treinando, mode:DOWN
+2026-03-31 16:01:30, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-03-31 16:01:31, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:103
+2026-03-31 16:01:58, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:103
+2026-03-31 16:02:33, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:105
+2026-03-31 16:18:16, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50, size:106
+2026-03-31 18:46:29, EXEC, v:1, k:ed@treinando, mode:FULL, rate:66, size:123
+2026-03-31 18:48:42, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:126
+2026-03-31 18:49:01, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:130
+2026-03-31 18:49:11, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-03-31 18:49:33, SELF, v:1, k:ed@treinando, self:1, rate:100, study:120
+2026-03-31 20:13:14, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-03-31 20:13:15, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:57
+2026-03-31 20:13:37, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:57
+2026-03-31 20:13:57, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:58
+2026-03-31 20:35:42, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:71
+2026-03-31 20:41:06, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:75
+2026-03-31 20:45:59, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:75
+2026-03-31 20:46:13, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:75
+2026-03-31 20:46:27, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:75
+2026-03-31 20:46:38, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-03-31 20:47:08, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:50

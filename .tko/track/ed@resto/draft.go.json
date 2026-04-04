@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_10-52-56",
+            "content": "@@ -112,32 +112,37 @@\n .Println(result,\n+ %22 %22,\n  remain)%0A%09%09retur\n@@ -182,16 +182,21 @@\n (result,\n+ %22 %22,\n  remain)\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-01_10-53-25",
+            "content": "package main\nimport \"fmt\"\n\nfunc resto(num int) {\n\tvar remain = num % 2\n\tvar result = num/2\n\tif num == 1 {\n\t\tfmt.Println(result, remain)\n\t\treturn\n\t}\n\n\tresto(result)\n\tfmt.Println(result, remain)\n}\n\nfunc main() {\n\tvar num int\n\tfmt.Scan(&num)\n\tresto(num)\n}\n",
+            "lines": "20"
+        }
+    ]
+}
