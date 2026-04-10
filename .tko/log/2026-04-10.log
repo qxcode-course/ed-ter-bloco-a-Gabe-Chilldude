@@ -1,0 +1,9 @@
+2026-04-10 12:18:03, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-10 12:38:04, EXEC, v:1, k:src@go, mode:FREE, size:103
+2026-04-10 12:40:01, EXEC, v:1, k:src@go, mode:FREE
+2026-04-10 12:40:31, EXEC, v:1, k:src@go, mode:FREE
+2026-04-10 12:41:27, EXEC, v:1, k:src@go, mode:FREE
+2026-04-10 13:43:24, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-10 13:43:25, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:111
+2026-04-10 13:44:45, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:112
+2026-04-10 13:44:48, MOVE, v:1, k:ed@labirinto, mode:BACK
