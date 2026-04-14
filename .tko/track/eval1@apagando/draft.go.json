@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-06-57",
+            "content": "@@ -408,28 +408,18 @@\n %0A%09%0A%09\n-aux := array%0A%09a\n+newA\n rray \n+:\n = ma\n@@ -428,17 +428,39 @@\n (%5B%5Dint, \n-0\n+len(array)-len(targets)\n )%0A%09for i\n@@ -469,18 +469,20 @@\n  range a\n-ux\n+rray\n  %7B%0A%09%09if \n@@ -482,18 +482,20 @@\n %7B%0A%09%09if a\n-ux\n+rray\n %5Bi%5D != 0\n@@ -499,17 +499,20 @@\n = 0%7B%0A%09%09%09\n-a\n+newA\n rray = a\n@@ -521,18 +521,23 @@\n end(\n-a\n+newA\n rray, a\n-ux\n+rray\n %5Bi%5D)\n@@ -545,16 +545,34 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09array = newArray%0A\n %7D%0A%0Afunc \n@@ -805,10 +805,38 @@\n (fila)%0A%0A\n+%09fmt.Println(%22Hello World%22)%0A\n %7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-14_11-08-14",
+            "content": "@@ -290,21 +290,16 @@\n  %5B%5Dint) \n-%5B%5Dint\n %7B%0A%09for i\n@@ -408,18 +408,28 @@\n %0A%09%0A%09\n-newA\n+aux := array%0A%09a\n rray \n-:\n = ma\n@@ -453,28 +453,26 @@\n  i:= range a\n-rray\n+ux\n  %7B%0A%09%09if arra\n@@ -464,28 +464,26 @@\n aux %7B%0A%09%09if a\n-rray\n+ux\n %5Bi%5D != 0%7B%0A%09%09\n@@ -483,20 +483,17 @@\n = 0%7B%0A%09%09%09\n-newA\n+a\n rray = a\n@@ -502,23 +502,18 @@\n end(\n-newA\n+a\n rray, a\n-rray\n+ux\n %5Bi%5D)\n@@ -525,25 +525,8 @@\n %09%7D%0A%0A\n-%09return newArray%0A\n %7D%0A%0Af\n@@ -716,21 +716,8 @@\n )%0A%0A%09\n-filaFinal := \n arra\n@@ -764,13 +764,8 @@\n fila\n-Final\n )%0A%0A%7D\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-14_11-09-31",
+            "content": "@@ -130,24 +130,43 @@\n ay %5B%5Dint) %7B%0A\n+%09n := len(array)-1%0A\n %09for i:=0;i \n@@ -177,16 +177,18 @@\n n(array)\n+-1\n ;i++ %7B%0A%09\n@@ -212,24 +212,50 @@\n i%5D, %22 %22)%0A%09%7D%0A\n+%09fmt.Print(array%5Bn%5D,%22%5Cn%22)%0A\n %7D%0A%0Afunc arra\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-14_11-09-55",
+            "content": "@@ -199,25 +199,8 @@\n %0A%09%7D%0A\n-%09fmt.Print(%22%5Cn%22)%0A\n %7D%0A%0Af\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_11-10-12",
+            "content": "package main\nimport \"fmt\"\n\nfunc scanArray(array []int) {\n\tfor i := range array {\n\t\tfmt.Scan(&array[i])\n\t}\n}\n\nfunc prettyArray(array []int) {\n\tfor i:=0;i < len(array);i++ {\n\t\tfmt.Print(array[i], \" \")\n\t}\n\tfmt.Print(\"\\n\")\n}\n\nfunc arrayRemove(array []int, targets []int) []int{\n\tfor i:= range array {\n\t\tfor j:= range targets {\n\t\t\tif array[i] == targets[j] {\n\t\t\t\tarray[i] = 0\n\t\t\t}\n\t\t}\n\t}\n\t\n\tnewArray := make([]int, 0)\n\tfor i:= range array {\n\t\tif array[i] != 0{\n\t\t\tnewArray = append(newArray, array[i])\n\t\t}\n\t}\n\n\treturn newArray\n}\n\nfunc main() {\n\tvar inicio,saidas int\n\t\n\tfmt.Scan(&inicio)\n\n\tfila := make([]int, inicio)\n\n\tscanArray(fila)\n\n\tfmt.Scan(&saidas)\n\n\tdesertores := make([]int, saidas)\n\n\tscanArray(desertores)\n\n\tfilaFinal := arrayRemove(fila, desertores)\n\n\tprettyArray(filaFinal)\n\n}\n",
+            "lines": "55"
+        }
+    ]
+}

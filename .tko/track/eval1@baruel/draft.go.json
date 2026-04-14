@@ -1,0 +1,174 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-30-41",
+            "content": "@@ -807,10 +807,38 @@\n )%0A%09%7D%0A%0A%0A%0A\n+%09fmt.Println(%22Hello World%22)%0A\n %7D%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-14_10-30-50",
+            "content": "@@ -140,16 +140,31 @@\n %5Bi-1%5D %7B%0A\n+%09%09%09figs%5Bi%5D = 0%0A\n %09%09%09repet\n@@ -197,31 +197,16 @@\n igs%5Bi%5D)%0A\n-%09%09%09figs%5Bi%5D = 0%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-04-14_10-31-10",
+            "content": "@@ -191,18 +191,16 @@\n %09%09figs%5Bi\n--1\n %5D = 0%0A%09%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-04-14_10-31-50",
+            "content": "@@ -265,42 +265,22 @@\n nt) \n-%5B%5D\n int%7B%0A%09\n-faltando := make(%5B%5Dint, 0)\n+qtd := 0\n %0A%09fo\n@@ -426,45 +426,14 @@\n %0A%09%09%09\n-faltando = append(faltando, album%5Bi%5D)\n+qtd ++\n %0A%09%09%7D\n@@ -445,24 +445,19 @@\n %09return \n-faltando\n+qtd\n %0A%7D%0A%0Afunc\n@@ -688,16 +688,18 @@\n (figs)%0A%09\n+//\n faltando\n@@ -811,88 +811,8 @@\n %09%7D%0A%0A\n-%09if len(faltando) %3E 0%7B%0A%09%09fmt.Println(faltando)%0A%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%0A\n %0A%0A%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-04-14_10-33-24",
+            "content": "@@ -611,21 +611,19 @@\n = range(\n-total\n+qtd\n ) %7B%0A%09%09al\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-14_10-33-53",
+            "content": "@@ -512,167 +512,8 @@\n %0A%7D%0A%0A\n-func prettyArray(array %5B%5Dint) %7B%0A%09for i := range array %7B%0A%09%09if i == len(array)-1 %7B%0A%09%09%09fmt.Print(array%5Bi%5D, %22%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(array%5Bi%5D, %22 %22)%0A%09%09%7D%0A%09%7D%0A%7D%0A%0A\n func\n@@ -807,27 +807,27 @@\n  %3E 0%7B%0A%09%09\n-prettyArray\n+fmt.Println\n (repetid\n@@ -892,19 +892,19 @@\n %7B%0A%09%09\n-prettyArray\n+fmt.Println\n (fal\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-14_10-36-14",
+            "content": "@@ -570,27 +570,102 @@\n %7B%0A%09%09\n-fmt.Print(array%5Bi%5D)\n+if i == len(array)-1 %7B%0A%09%09%09fmt.Print(array%5Bi%5D, %22%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(array%5Bi%5D, %22 %22)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-14_10-37-17",
+            "content": "@@ -590,87 +590,8 @@\n i%5D)%0A\n-%09%09if i == len(array) - 1 %7B%0A%09%09%09fmt.Print(%22%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-04-14_10-38-07",
+            "content": "@@ -606,17 +606,19 @@\n n(array)\n--\n+ - \n 1 %7B%0A%09%09%09f\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-38-20",
+            "content": "@@ -593,17 +593,18 @@\n %0A%09%09if i \n-%3C\n+==\n  len(arr\n@@ -608,16 +608,17 @@\n array)-1\n+ \n %7B%0A%09%09%09fmt\n@@ -629,19 +629,26 @@\n nt(%22\n- \n+%5Cn\n %22)%0A%09%09%7D\n-%0A%09%7D%0A\n+ else %7B%0A%09%09\n %09fmt\n@@ -655,20 +655,26 @@\n .Print(%22\n-%5Cn%22)\n+ %22)%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0Afunc\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-40-07",
+            "content": "@@ -546,58 +546,76 @@\n %7B%0A%09f\n-mt.Println(len(array)-1 )%0A%09for i := range \n+or i := range array %7B%0A%09%09fmt.Print(array%5Bi%5D)%0A%09%09if i %3C len(\n array\n- \n+)-1\n %7B%0A\n+%09\n %09%09fm\n@@ -622,25 +622,24 @@\n t.Print(\n-array%5Bi%5D)\n+%22 %22)%0A%09%09%7D\n %0A%09%7D%0A%09fmt\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-14_10-40-37",
+            "content": "@@ -540,16 +540,44 @@\n %5Dint) %7B%0A\n+%09fmt.Println(len(array)-1 )%0A\n %09for i :\n@@ -618,25 +618,8 @@\n i%5D)%0A\n-%09%09fmt.Println(i)%0A\n %09%7D%0A%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-14_10-41-01",
+            "content": "@@ -544,27 +544,8 @@\n ) %7B%0A\n-%09n := len(array)-1%0A\n %09for\n@@ -592,48 +592,22 @@\n )%0A%09%09\n-if i == n %7B%0A%09%09%09fmt.Println(%22banana%22)%0A%09%09%7D\n+fmt.Println(i)\n %0A%09%7D%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-14_10-41-37",
+            "content": "@@ -612,17 +612,18 @@\n %0A%09%09if i \n-%3C\n+==\n  n %7B%0A%09%09%09\n@@ -635,17 +635,22 @@\n rintln(%22\n- \n+banana\n %22)%0A%09%09%7D%0A%09\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-41-46",
+            "content": "@@ -630,16 +630,18 @@\n mt.Print\n+ln\n (%22 %22)%0A%09%09\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-41-51",
+            "content": "@@ -630,17 +630,16 @@\n mt.Print\n-f\n (%22 %22)%0A%09%09\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-41-59",
+            "content": "@@ -587,22 +587,8 @@\n y %7B%0A\n-%09%09if i %3C n %7B%0A%09\n %09%09fm\n@@ -607,23 +607,20 @@\n y%5Bi%5D\n-, %22 %22)%0A%09%09%7D else\n+)%0A%09%09if i %3C n\n  %7B%0A%09\n@@ -626,33 +626,29 @@\n %09%09%09fmt.Print\n-(array%5Bi%5D\n+f(%22 %22\n )%0A%09%09%7D%0A%09%7D%0A%09fm\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-42-48",
+            "content": "@@ -569,35 +569,42 @@\n or i\n+ \n :=\n-0;i %3C len(array);i++\n+ range array %7B%0A%09%09if i %3C n\n  %7B%0A%09%09\n+%09\n fmt.\n@@ -621,20 +621,23 @@\n y%5Bi%5D\n-)%0A%09%09if i %3C n\n+, %22 %22)%0A%09%09%7D else\n  %7B%0A%09\n@@ -648,19 +648,24 @@\n t.Print(\n-%22 %22\n+array%5Bi%5D\n )%0A%09%09%7D%0A%09%7D\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-04-14_10-44-34",
+            "content": "@@ -590,16 +590,38 @@\n );i++ %7B%0A\n+%09%09fmt.Print(array%5Bi%5D)%0A\n %09%09if i %3C\n@@ -642,18 +642,8 @@\n int(\n-array%5Bi%5D, \n %22 %22)\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-14_10-45-05",
+            "content": "@@ -637,43 +637,9 @@\n )%0A%09%09\n-%09continue%0A%09%09%7D%0A%09%09fmt.Print(array%5Bi%5D)\n+%7D\n %0A%09%7D%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-14_10-45-33",
+            "content": "@@ -587,17 +587,29 @@\n ray)\n--1\n ;i++ %7B%0A\n+%09%09if i %3C n %7B%0A%09\n %09%09fm\n@@ -631,19 +631,33 @@\n %5D, %22 %22)%0A\n+%09%09%09continue%0A%09\n %09%7D%0A\n+%09\n %09fmt.Pri\n@@ -669,11 +669,26 @@\n ray%5B\n-n%5D,\n+i%5D)%0A%09%7D%0A%09fmt.Print(\n %22%5Cn%22\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-04-14_10-46-11",
+            "content": "@@ -1035,10 +1035,8 @@\n %7B%0A%09%09\n-//\n pret\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-14_10-46-54",
+            "content": "@@ -1023,32 +1023,34 @@\n altando) %3E 0%7B%0A%09%09\n+//\n prettyArray(falt\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-14_10-47-18",
+            "content": "@@ -622,16 +622,42 @@\n %22 %22)%0A%09%7D%0A\n+%09fmt.Print(array%5Bn%5D,%22%5Cn%22)%0A\n %7D%0A%0Afunc \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-14_10-48-21",
+            "content": "@@ -540,16 +540,35 @@\n %5Dint) %7B%0A\n+%09n := len(array)-1%0A\n %09for i:=\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-14_10-48-33",
+            "content": "@@ -564,16 +564,18 @@\n n(array)\n+-1\n ;i++ %7B%0A%09\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-04-14_10-48-41",
+            "content": "@@ -508,16 +508,111 @@\n ando%0A%7D%0A%0A\n+func prettyArray(array %5B%5Dint) %7B%0A%09for i:=0;i %3C len(array);i++ %7B%0A%09%09fmt.Print(array%5Bi%5D, %22 %22)%0A%09%7D%0A%7D%0A\n %0Afunc ma\n@@ -903,27 +903,27 @@\n  %3E 0%7B%0A%09%09\n-fmt.Println\n+prettyArray\n (repetid\n@@ -984,27 +984,27 @@\n  %3E 0%7B%0A%09%09\n-fmt.Println\n+prettyArray\n (faltand\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-04-14_10-49-20",
+            "content": "@@ -607,30 +607,31 @@\n r i := range\n- album\n+(total)\n  %7B%0A%09%09album%5Bi\n@@ -679,29 +679,29 @@\n r i := range\n- figs\n+(qtd)\n  %7B%0A%09%09fmt.Sca\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-14_10-52-01",
+            "content": "@@ -512,150 +512,8 @@\n %0A%7D%0A%0A\n-func prettyArray(array %5B%5Dint) %7B%0A%09n := len(array)-1%0A%09for i:=0;i %3C len(array)-1;i++ %7B%0A%09%09fmt.Print(array%5Bi%5D, %22 %22)%0A%09%7D%0A%09fmt.Print(array%5Bn%5D,%22%5Cn%22)%0A%7D%0A\n %0Afun\n@@ -807,27 +807,27 @@\n  %3E 0%7B%0A%09%09\n-prettyArray\n+fmt.Println\n (repetid\n@@ -892,19 +892,19 @@\n %7B%0A%09%09\n-prettyArray\n+fmt.Println\n (fal\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-14_10-52-25",
+            "content": "@@ -364,92 +364,8 @@\n s %7B%0A\n-%09%09%09fmt.Println(album%5Bi%5D)%0A%09%09%09fmt.Println(figs%5Bj%5D)%0A%09%09%09fmt.Println(%22----------------%22)%0A\n %09%09%09i\n@@ -406,16 +406,26 @@\n = false%0A\n+%09%09%09%09break%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-14_10-55-12",
+            "content": "@@ -1,1086 +1,175 @@\n-package main%0Aimport %22fmt%22%0A%0Afunc repetidas(figs %5B%5Dint) %5B%5Dint%7B%0A%09repetidas := make(%5B%5Dint, 0)%0A%09for i:=1; i%3Clen(figs); i++%7B%0A%09%09if figs%5Bi%5D == figs%5Bi-1%5D %7B%0A%09%09%09repetidas = append(repetidas, figs%5Bi%5D)%0A%09%09%09figs%5Bi-1%5D = 0%0A%09%09%7D%0A%09%7D%0A%0A%09return repetidas%0A%7D%0A%0Afunc faltando(album, figs %5B%5Dint) %5B%5Dint%7B%0A%09faltando := make(%5B%5Dint, 0)%0A%09for i := range album %7B%0A%09%09falta := true%0A%09%09for j := range figs %7B%0A%09%09%09if figs%5Bj%5D == album%5Bi%5D %7B%0A%09%09%09%09falta = false%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if falta %7B%0A%09%09%09faltando = append(faltando, album%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09return faltando%0A%7D%0A%0Afunc prettyArray(array %5B%5Dint) %7B%0A%09n := len(array)-1%0A%09for i:=0;i %3C len(array)-1;i++ %7B%0A%09%09fmt.Print(array%5Bi%5D, %22 %22)%0A%09%7D%0A%09fmt.Print(array%5Bn%5D,%22%5Cn%22)%0A%7D%0A%0Afunc main() %7B%0A%09var total, qtd int%0A%0A%09fmt.Scan(&total, &qtd)%0A%0A%09album := make(%5B%5Dint, qtd)%0A%09for i := range album %7B%0A%09%09album%5Bi%5D = i+1%0A%09%7D%0A%0A%09figs := make(%5B%5Dint, qtd)%0A%09for i := range figs %7B%0A%09%09fmt.Scan(&figs%5Bi%5D)%0A%09%7D%0A%0A%09repetidas := repetidas(figs)%0A%09faltando := faltando(album, figs)%0A%0A%09if len(repetidas) %3E 0%7B%0A%09%09prettyArray(repetidas)%0A%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%0A%09if len(faltando) %3E 0%7B%0A%09%09prettyArray(faltando)%0A%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%0A%0A%0A%7D\n+@@ -360,16 +360,100 @@%0A  figs %257B%250A%0A+%2509%2509%2509fmt.Println(album%255Bi%255D)%250A%2509%2509%2509fmt.Println(figs%255Bj%255D)%250A%2509%2509%2509fmt.Println(%2522----------------%2522)%250A%0A %2509%2509%2509if fi\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_10-55-36",
+            "content": "@@ -300,57 +300,8 @@\n  0)%0A\n-%09fmt.Println(len(album))%0A%09fmt.Println(len(figs))%0A\n %09for\n@@ -723,21 +723,19 @@\n (%5B%5Dint, \n-total\n+qtd\n )%0A%09for i\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-14_10-57-30",
+            "content": "@@ -292,24 +292,73 @@\n e(%5B%5Dint, 0)%0A\n+%09fmt.Println(len(album))%0A%09fmt.Println(len(figs))%0A\n %09for i := ra\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-14_10-57-40",
+            "content": "package main\nimport \"fmt\"\n\nfunc repetidas(figs []int) []int{\n\trepetidas := make([]int, 0)\n\tfor i:=1; i<len(figs); i++{\n\t\tif figs[i] == figs[i-1] {\n\t\t\trepetidas = append(repetidas, figs[i])\n\t\t\tfigs[i-1] = 0\n\t\t}\n\t}\n\n\treturn repetidas\n}\n\nfunc faltando(album, figs []int) []int{\n\tfaltando := make([]int, 0)\n\tfor i := range album {\n\t\tfalta := true\n\t\tfor j := range figs {\n\t\t\tif figs[j] == album[i] {\n\t\t\t\tfalta = false\n\t\t\t}\n\t\t}\n\n\t\tif falta {\n\t\t\tfaltando = append(faltando, album[i])\n\t\t}\n\t}\n\n\treturn faltando\n}\n\nfunc prettyArray(array []int) {\n\tn := len(array)-1\n\tfor i:=0;i < len(array)-1;i++ {\n\t\tfmt.Print(array[i], \" \")\n\t}\n\tfmt.Print(array[n],\"\\n\")\n}\n\nfunc main() {\n\tvar total, qtd int\n\n\tfmt.Scan(&total, &qtd)\n\n\talbum := make([]int, total)\n\tfor i := range album {\n\t\talbum[i] = i+1\n\t}\n\n\tfigs := make([]int, qtd)\n\tfor i := range figs {\n\t\tfmt.Scan(&figs[i])\n\t}\n\n\trepetidas := repetidas(figs)\n\tfaltando := faltando(album, figs)\n\n\tif len(repetidas) > 0{\n\t\tprettyArray(repetidas)\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n\n\tif len(faltando) > 0{\n\t\tprettyArray(faltando)\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n\n\n\n}\n",
+            "lines": "74"
+        }
+    ]
+}
