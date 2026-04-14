@@ -39,19 +39,19 @@ func way(grid [][]rune, startPos, endPos Pos) bool {
 
 	nextPos.l = startPos.l + 1
 	nextPos.c = startPos.c
-	res = way(grid, nextPos, endPos) || res
+	res = way(grid, nextPos, endPos) || res // direita
 
 	nextPos.l = startPos.l - 1
 	nextPos.c = startPos.c
-	res = way(grid, nextPos, endPos) || res
+	res = way(grid, nextPos, endPos) || res // esquerda
 
 	nextPos.l = startPos.l
 	nextPos.c = startPos.c + 1
-	res = way(grid, nextPos, endPos) || res
+	res = way(grid, nextPos, endPos) || res // baixo
 
 	nextPos.l = startPos.l
 	nextPos.c = startPos.c - 1
-	res = way(grid, nextPos, endPos) || res
+	res = way(grid, nextPos, endPos) || res // cima
 
 	if res {
 		grid[startPos.l][startPos.c] = '.'

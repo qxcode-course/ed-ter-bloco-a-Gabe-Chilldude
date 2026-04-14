@@ -1,0 +1,50 @@
+2026-04-13 15:49:32, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:30, friend:Heitor Pimenta
+2026-04-13 15:51:01, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-04-13 15:51:02, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:5
+2026-04-13 15:51:03, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-04-13 15:54:22, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-13 15:50:58, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-13 15:54:22, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-13 15:58:28, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-04-13 15:58:32, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-04-13 15:58:08, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-13 15:58:08, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-13 15:58:28, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 15:58:28, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 15:58:28, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:02:02, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:02:02, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:07:51, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:07:51, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:14:32, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:14:32, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:18:54, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:18:54, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:24:33, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:24:33, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:29:34, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:29:34, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:31:39, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:31:39, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:43:47, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:43:47, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:49:27, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:49:27, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:54:38, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:54:39, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:59:20, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 16:59:20, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:04:42, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:04:42, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:08:49, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:08:49, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:12:09, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:67
+2026-04-13 17:12:28, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:68
+2026-04-13 17:12:30, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-04-13 17:12:24, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:12:24, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:27:25, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-04-13 17:27:26, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:67
+2026-04-13 17:27:27, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-04-13 17:27:22, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-04-13 17:27:22, MOVE, v:1, k:ed@princesa, mode:EDIT
