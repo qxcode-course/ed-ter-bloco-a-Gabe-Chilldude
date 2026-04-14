@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func processa(vet []int) {
+func somar(vet []int, pointer int) {
 	_ = vet;
 	// 1. defina o ponto de parada
 	// 2. monte o vetor auxiliar com os resultados das somas
@@ -21,13 +21,15 @@ func processa(vet []int) {
 		return
 	}
 
-	aux := vet[1:]
-
-	aux[0] = vet[0]+vet[1]
-	processa(vet[1:])
+	vet[pointer] = vet[pointer] + vet[pointer+1]
+	soma(vet, pointer+1)
 	fmt.Print("[ ")
 	fmt.Print(Join(vet, " "))
 	fmt.Print(" ]\n")
+}
+
+func processa(vet []int) {
+	somar(vet, 0)
 }
 
 func main() {

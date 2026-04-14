@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-37-22",
+            "content": "@@ -403,44 +403,6 @@\n %09%7D%0A%0A\n-%09fmt.Println(quantosCasais(animais))%0A%0A\n %7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_11-37-34",
+            "content": "@@ -185,17 +185,17 @@\n f array%5B\n-j\n+i\n %5D == -(a\n@@ -199,17 +199,17 @@\n -(array%5B\n-i\n+j\n %5D) %7B%0A%09%09%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_11-38-17",
+            "content": "@@ -177,58 +177,8 @@\n y %7B%0A\n-%09%09%09fmt.Println(array%5Bj%5D)%0A%09%09%09fmt.Println(array%5Bi%5D)%0A\n %09%09%09i\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_11-38-35",
+            "content": "@@ -259,33 +259,8 @@\n ) %7B%0A\n-%09%09%09%09fmt.Println(%22ueepa%22)%0A\n %09%09%09%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_11-38-53",
+            "content": "@@ -337,31 +337,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println(%22-----%22)%0A\n %09%7D%0A%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_11-39-30",
+            "content": "@@ -173,16 +173,66 @@\n array %7B%0A\n+%09%09%09fmt.Println(array%5Bj%5D)%0A%09%09%09fmt.Println(array%5Bi%5D)%0A\n %09%09%09if ar\n@@ -255,16 +255,41 @@\n y%5Bi%5D) %7B%0A\n+%09%09%09%09fmt.Println(%22ueepa%22)%0A\n %09%09%09%09res+\n@@ -328,18 +328,8 @@\n = 0%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_11-40-08",
+            "content": "@@ -268,16 +268,39 @@\n %09%09%7D%0A%09%09%7D%0A\n+%09%09fmt.Println(%22-----%22)%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_11-40-12",
+            "content": "package main\nimport \"fmt\"\n\nfunc quantosCasais(animais []int) int {\n\tres := 0\n\tarray := animais\n\tfor i := range array {\n\t\tif array[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfor j:= range array {\n\t\t\tif array[j] == -(array[i]) {\n\t\t\t\tres++\n\t\t\t\tarray[i] = 0\n\t\t\t\tarray[j] = 0\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\n\treturn res\n}\n\nfunc main() {\n\tvar n int\n\n\tfmt.Scan(&n)\n\n\tanimais := make([]int, n)\n\n\tfor i:= range animais {\n\t\tfmt.Scan(&animais[i])\n\t}\n\n\tfmt.Println(quantosCasais(animais))\n\n}\n",
+            "lines": "37"
+        }
+    ]
+}
