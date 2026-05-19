@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@teste-1
-- sandbox@sandbox
+- ed@list
 flags:
   inbox: all
   panel: help
-  show_panel: 'true'
-  task_graph_mode: executions
+  show_panel: 'false'
+  task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: eval1@triangulo
+selected: ed@editorint
+selected_index: 15

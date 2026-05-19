@@ -1,0 +1,32 @@
+2026-04-17 12:55:06, SELF, v:1, k:ed@+recursao, self:1
+2026-04-17 12:55:26, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-04-17 12:55:29, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-04-17 12:56:07, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-04-17 12:57:01, MOVE, v:1, k:ed@vetbuild, mode:DOWN
+2026-04-17 12:57:04, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-17 12:57:01, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 12:57:01, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 12:57:01, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 12:57:01, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:09:31, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:132
+2026-04-17 13:05:43, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:05:43, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:11:50, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:132
+2026-04-17 13:13:08, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:134
+2026-04-17 13:13:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:135
+2026-04-17 13:13:57, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:13:57, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:19:08, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:138, fail:COMP
+2026-04-17 13:19:05, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:19:05, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:20:47, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:20:47, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:25:13, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:137
+2026-04-17 13:25:21, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:137
+2026-04-17 13:25:32, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:137
+2026-04-17 13:25:49, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:137
+2026-04-17 13:29:28, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:29:28, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-17 13:32:50, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:149
+2026-04-17 13:33:34, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:18, size:149
+2026-04-17 13:34:24, MOVE, v:1, k:ed@vetbuild, mode:BACK

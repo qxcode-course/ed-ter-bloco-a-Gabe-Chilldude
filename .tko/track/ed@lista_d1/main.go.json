@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_13-58-17",
+            "content": "@@ -451,383 +451,8 @@\n %0A%7D%0A%0A\n-func (node Node) Next() *Node%7B%0A%09return node.next%0A%7D%0A%0Afunc (node Node) Prev() *Node%7B%0A%09return node.prev%0A%7D%0A%0Afunc (node Node) GetValue() int %7B%0A%09return node.value%0A%7D%0A%0Afunc (node * Node) SetValue(value int) %7B%0A%09node.value = value%0A%7D%0A%0Afunc (l LList) Front() *Node%7B%0A%09return l.root.next%0A%7D%0A%0Afunc (l LList) Back() *Node%7B%0A%09return l.root.prev%0A%7D%0A%0Afunc (l LList) End() *Node%7B%0A%09return l.root%0A%7D%0A%0A\n func\n@@ -497,23 +497,25 @@\n nsert(l.\n-F\n ro\n-nt()\n+ot.next\n , value)\n@@ -567,21 +567,20 @@\n nsert(l.\n-End()\n+root\n , value)\n@@ -623,23 +623,25 @@\n emove(l.\n-F\n ro\n-nt()\n+ot.next\n )%0A%7D%0A%0Afun\n@@ -680,187 +680,13 @@\n e(l.\n-Back())%0A%7D%0A%0Afunc (l * LList) String() string%7B%0A%09res := %22%5B %22%0A%09for i := l.Front(); i != l.End(); i = i.next %7B%0A%09%09res = res + fmt.Sprintf(%22%25d %22, i.GetValue())%0A%09%7D%0A%09res += %22%5D%22%0A%09return res\n+root)\n %0A%7D%0A%0A\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-28_14-05-59",
+            "content": "@@ -148,131 +148,8 @@\n %0A%7D%0A%0A\n-func NewLList() LList%7B%0A%09var root Node%0A%09root = Node %7B%0A%09%09next: &root,%0A%09%09prev: &root,%0A%09%7D%0A%0A%09return LList%7B%0A%09%09root: &root,%0A%09%7D%0A%7D%0A%0A\n func\n@@ -1284,18 +1284,18 @@\n .Stdin)%0A\n-  \n+//\n  %09ll := \n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-28_14-08-40",
+            "content": "@@ -1407,16 +1407,19 @@\n .Stdin)%0A\n+   \n %09ll := N\n@@ -1652,24 +1652,27 @@\n  %22show%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-04-28_14-09-02",
+            "content": "@@ -1226,16 +1226,17 @@\n es := %22%5B\n+ \n %22%0A%09for i\n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-04-28_14-09-29",
+            "content": "@@ -53,19 +53,8 @@\n gs%22%0A\n-%09%22strconv%22%0A\n )%0A%0At\n@@ -1744,16 +1744,19 @@\n ck%22:%0A%09%09%09\n+// \n for _, v\n@@ -1779,16 +1779,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09num, _ \n@@ -1812,16 +1812,19 @@\n i(v)%0A%09%09%09\n+// \n %09ll.Push\n@@ -1836,16 +1836,19 @@\n num)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-04-28_14-10-01",
+            "content": "@@ -1311,17 +1311,25 @@\n t.Sprint\n-(\n+f(%22%25d %22, \n i.GetVal\n@@ -1338,53 +1338,8 @@\n ())%0A\n-%09%09if i != l.Back() %7B%0A%09%09%09res = res + %22, %22%0A%09%09%7D%0A\n %09%7D%0A%09\n",
+            "lines": "153"
+        },
+        {
+            "label": "2026-04-28_14-11-23",
+            "content": "@@ -1897,24 +1897,27 @@\n _front%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1928,32 +1928,35 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+// \n %09num, _ := strco\n@@ -1961,32 +1961,35 @@\n conv.Atoi(v)%0A%09%09%09\n+// \n %09ll.PushFront(nu\n@@ -1986,32 +1986,35 @@\n shFront(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22pop_ba\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-28_14-11-48",
+            "content": "@@ -1405,124 +1405,8 @@\n %0A%7D%0A%0A\n-func (l LList) Size() int%7B%0A%09size := 0%0A%09for i := l.Front(); i != l.End(); i = i.next %7B%0A%09%09size ++%0A%09%7D%0A%0A%09return size%0A%7D%0A%0A\n func\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-28_14-25-30",
+            "content": "@@ -1855,24 +1855,27 @@\n  %22size%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-04-28_14-25-39",
+            "content": "@@ -1197,204 +1197,8 @@\n %0A%7D%0A%0A\n-func (l LList) Size() int%7B%0A%09size := 0%0A%09for i := l.Front(); i != l.End(); i = i.next %7B%0A%09%09size ++%0A%09%7D%0A%0A%09return size%0A%7D%0A%0Afunc (l * LList) Clear() %7B%0A%09for i:= 0; i %3C l.Size(); i++ %7B%0A%09%09l.PopFront()%0A%09%7D%0A%7D%0A%0A\n func\n@@ -1397,24 +1397,140 @@\n turn res%0A%7D%0A%0A\n+func (l LList) Size() int%7B%0A%09size := 0%0A%09for i := l.Front(); i != l.End(); i = i.next %7B%0A%09%09size ++%0A%09%7D%0A%0A%09return size%0A%7D%0A%0A\n func main() \n@@ -2197,16 +2197,19 @@\n ar%22:%0A%09%09%09\n+// \n ll.Clear\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-04-28_14-29-17",
+            "content": "@@ -1347,16 +1347,20 @@\n r i:= 0;\n+ i %3C\n  l.Size(\n@@ -1364,12 +1364,8 @@\n ze()\n- %3E 0\n ; i+\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-04-28_14-29-54",
+            "content": "@@ -1340,122 +1340,8 @@\n ) %7B%0A\n-%09// meu Deus, muito loop%0A%09// talvez seja melhor ter um LList.size%0A%09// ai incrementa ou decrementa em push ou pop %0A\n %09for\n@@ -2198,24 +2198,27 @@\n p_back%22:%0A%09%09%09\n+// \n ll.PopBack()\n@@ -2241,16 +2241,19 @@\n nt%22:%0A%09%09%09\n+// \n ll.PopFr\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-04-28_14-31-09",
+            "content": "@@ -1125,36 +1125,8 @@\n ) %7B%0A\n-%09if l.Front() != l.End() %7B%0A%09\n %09rem\n@@ -1136,27 +1136,24 @@\n (l.Front())%0A\n-%09%7D%0A\n %7D%0A%0Afunc (l *\n@@ -1176,35 +1176,8 @@\n ) %7B%0A\n-%09if l.Back() != l.End() %7B%0A%09\n %09rem\n@@ -1190,19 +1190,16 @@\n Back())%0A\n-%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-04-28_14-32-30",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype Node struct {\n\tvalue int\n\tnext *Node\n\tprev *Node\n}\n\ntype LList struct {\n\troot *Node\n}\n\nfunc NewLList() LList{\n\tvar root Node\n\troot = Node {\n\t\tnext: &root,\n\t\tprev: &root,\n\t}\n\n\treturn LList{\n\t\troot: &root,\n\t}\n}\n\nfunc insert(node *Node, value int) {\n\tprevious := node.prev\n\n\tnewNode := Node {\n\t\tvalue: value,\n\t\tnext: node,\n\t\tprev: previous,\n\t}\n\n\tnode.prev = &newNode\n\tprevious.next = &newNode\n}\n\nfunc remove(node *Node) {\n\tnode.prev.next = node.next\n\tnode.next.prev = node.prev\n\n\tnode.prev = nil\n\tnode.next = nil\n}\n\nfunc (node Node) Next() *Node{\n\treturn node.next\n}\n\nfunc (node Node) Prev() *Node{\n\treturn node.prev\n}\n\nfunc (node Node) GetValue() int {\n\treturn node.value\n}\n\nfunc (node * Node) SetValue(value int) {\n\tnode.value = value\n}\n\nfunc (l LList) Front() *Node{\n\treturn l.root.next\n}\n\nfunc (l LList) Back() *Node{\n\treturn l.root.prev\n}\n\nfunc (l LList) End() *Node{\n\treturn l.root\n}\n\nfunc (l * LList) PushFront(value int) {\n\tinsert(l.Front(), value)\n}\n\nfunc (l * LList) PushBack(value int) {\n\tinsert(l.End(), value)\n}\n\nfunc (l * LList) PopFront() {\n\tif l.Front() != l.End() {\n\t\tremove(l.Front())\n\t}\n}\n\nfunc (l * LList) PopBack() {\n\tif l.Back() != l.End() {\n\t\tremove(l.Back())\n\t}\n}\n\nfunc (l LList) Size() int{\n\tsize := 0\n\tfor i := l.Front(); i != l.End(); i = i.next {\n\t\tsize ++\n\t}\n\n\treturn size\n}\n\nfunc (l * LList) Clear() {\n\t// meu Deus, muito loop\n\t// talvez seja melhor ter um LList.size\n\t// ai incrementa ou decrementa em push ou pop \n\tfor i:= 0; l.Size() > 0; i++ {\n\t\tl.PopFront()\n\t}\n}\n\nfunc (l * LList) String() string{\n\tres := \"[\"\n\tfor i := l.Front(); i != l.End(); i = i.next {\n\t\tres = res + fmt.Sprint(i.GetValue())\n\t\tif i != l.Back() {\n\t\t\tres = res + \", \"\n\t\t}\n\t}\n\tres += \"]\"\n\treturn res\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewLList()\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tfmt.Println(ll.String())\n\t\tcase \"size\":\n\t\t\tfmt.Println(ll.Size())\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushBack(num)\n\t\t\t}\n\t\tcase \"push_front\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushFront(num)\n\t\t\t}\n\t\tcase \"pop_back\":\n\t\t\tll.PopBack()\n\t\tcase \"pop_front\":\n\t\t\tll.PopFront()\n\t\tcase \"clear\":\n\t\t\tll.Clear()\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "178"
+        }
+    ]
+}

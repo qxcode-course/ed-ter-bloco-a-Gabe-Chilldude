@@ -1,0 +1,33 @@
+2026-04-27 13:51:43, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-27 13:51:45, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-27 13:51:43, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 13:51:43, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 13:51:43, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:05:51, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-27 14:10:16, SELF, v:1, k:ed@vetbuild, self:1, rate:100, study:180
+2026-04-27 14:10:43, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:30
+2026-04-27 14:25:35, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:25:35, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:27:29, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-27 14:27:30, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-27 14:27:32, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-27 14:27:32, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:0, size:41
+2026-04-27 14:27:48, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:0, size:41
+2026-04-27 14:27:50, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:0
+2026-04-27 14:28:24, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:27, size:44
+2026-04-27 14:28:23, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:28:23, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:31:09, EXEC, v:1, k:ed@bettersearch, mode:FULL, size:53, fail:COMP
+2026-04-27 14:31:11, EXEC, v:1, k:ed@bettersearch, mode:FULL, fail:COMP
+2026-04-27 14:31:48, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:53
+2026-04-27 14:32:24, EXEC, v:1, k:src@go, mode:FREE, size:55
+2026-04-27 14:33:02, EXEC, v:1, k:src@go, mode:FREE, size:55
+2026-04-27 14:35:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:35:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:40:04, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:40:04, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:45:35, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:45:35, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:46:02, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 14:46:02, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-27 15:32:31, MOVE, v:1, k:ed@bettersearch, mode:BACK

@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_14-27-32",
+            "content": "@@ -225,9 +225,9 @@\n ce) \n-%3C\n+=\n = 1 \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-27_14-27-48",
+            "content": "@@ -144,51 +144,8 @@\n lue%0A\n-%09if len(slice) %3C= 0 %7B%0A%09%09return false, 0%0A%09%7D%0A\n %09if \n@@ -221,17 +221,17 @@\n (slice) \n-=\n+%3C\n = 1 %7B%0A%09%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-27_14-28-24",
+            "content": "@@ -188,16 +188,18 @@\n %09%7D%0A%09\n-middle :\n+if value =\n = sl\n@@ -215,32 +215,12 @@\n lice\n+)\n /2\n-)%5D%0A%09if value == middle\n+%5D\n  %7B%0A%09\n@@ -298,179 +298,63 @@\n %7D%0A%0A%09\n-var nextSlice %5B%5Dint%0A%0A%09if value %3C middle %7B%0A%09%09nextSlice = slice%5B0:len(slice)/2%5D%0A%09%7D else %7B%0A%09%09nextSlice = slice%5Blen(slice)/2:len(slice)/2%5D%0A%09%7D%0A%0A%09%0A%09return BetterSearch(nextSlice\n+%0A%09return BetterSearch(slice%5Blen(slice)/2:len(slice)/2%5D \n , va\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-27_14-31-09",
+            "content": "@@ -209,19 +209,19 @@\n en(slice\n-)\n /2\n+)\n %5D%0A%09if va\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_14-31-48",
+            "content": "@@ -218,28 +218,8 @@\n /2%5D%0A\n-%09fmt.Println(slice)%0A\n %09if \n@@ -333,17 +333,16 @@\n  %5B%5Dint%0A%0A\n-%0A\n %09if valu\n@@ -358,31 +358,8 @@\n e %7B%0A\n-%09%09fmt.Println(%22menor%22)%0A\n %09%09ne\n@@ -374,16 +374,17 @@\n = slice%5B\n+0\n :len(sli\n@@ -404,31 +404,8 @@\n e %7B%0A\n-%09%09fmt.Println(%22maior%22)%0A\n %09%09ne\n@@ -420,17 +420,29 @@\n = slice%5B\n-(\n+len(slice)/2:\n len(slic\n@@ -449,12 +449,8 @@\n e)/2\n-)-1:\n %5D%0A%09%7D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_10-09-42",
+            "content": "@@ -73,50 +73,39 @@\n nc B\n-inary\n+etter\n Search(\n-high, low, value int, slice %5B%5D\n+slice %5B%5Dint, value \n int)\n@@ -120,101 +120,144 @@\n int)\n+ \n %7B%0A%09\n-if high == low %7B%0A%09%09return false, 0%0A%09%7D%0A%09var newHigh, newLow int%0A%09if slice%5Bhigh-low%5D == valu\n+_, _ = slice, value%0A%09if len(slice) %3C= 0 %7B%0A%09%09return false, 0%0A%09%7D%0A%09middle := slice%5Blen(slice)/2%5D%0A%09fmt.Println(slice)%0A%09if value == middl\n e %7B%0A\n@@ -275,24 +275,28 @@\n ue, \n-high-low\n+len(slice)/2\n %0A%09%7D%0A%09if \n slic\n@@ -295,240 +295,225 @@\n %09if \n+len(\n slice\n-%5Bhigh-low%5D  %3E value %7B%0A%09%09newHigh = high/2%0A%09%7D%0A%09if slice%5Bhigh-low%5D  %3C value %7B%0A%09%09newLow = low*2%0A%09%7D%0A%0A%09return BinarySearch(newHigh, newLow, value, slice)%0A%7D%0A%0Afunc BetterSearch(slice %5B%5Dint, value int) (bool, int) %7B%0A%09_, _ = slice, value\n+) == 1 %7B%0A%09%09return false, 0%0A%09%7D%0A%0A%09var nextSlice %5B%5Dint%0A%0A%0A%09if value %3C middle %7B%0A%09%09fmt.Println(%22menor%22)%0A%09%09nextSlice = slice%5B:len(slice)/2%5D%0A%09%7D else %7B%0A%09%09fmt.Println(%22maior%22)%0A%09%09nextSlice = slice%5B(len(slice)/2)-1:%5D%0A%09%7D%0A\n %0A%09%0A%09\n@@ -524,48 +524,35 @@\n rn B\n-inary\n+etter\n Search(\n-len(slice)-1, 0, value, slic\n+nextSlice, valu\n e)%0A%7D\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-28_10-32-47",
+            "content": "@@ -133,99 +133,8 @@\n t)%7B%0A\n-%09if high %3E= len(slice) %7C%7C low %3E= len(slice) %7C%7C%0A%09high %3C 0 %7C%7C low %3C 0 %7B%0A%09%09return false, 0%0A%09%7D%0A\n %09if \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-28_10-33-54",
+            "content": "@@ -216,17 +216,16 @@\n false, 0\n- \n %0A%09%7D%0A%09if \n@@ -254,24 +254,17 @@\n  false, \n-high-low\n+0\n %0A%09%7D%0A%09var\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-35-06",
+            "content": "@@ -215,25 +215,18 @@\n  false, \n+0\n  \n-high-low\n %0A%09%7D%0A%09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-35-16",
+            "content": "@@ -216,17 +216,24 @@\n false,  \n-0\n+high-low\n %0A%09%7D%0A%09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-35-27",
+            "content": "@@ -240,35 +240,36 @@\n  low %7B%0A%09%09return \n-tru\n+fals\n e, high-low%0A%09%7D%0A%09\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-35-45",
+            "content": "@@ -219,31 +219,10 @@\n se, \n-(high-low) %25 len(slice)\n+ 0\n %0A%09%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-36-02",
+            "content": "@@ -226,16 +226,28 @@\n gh-low) \n+%25 len(slice)\n %0A%09%7D%0A%09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-36-09",
+            "content": "@@ -215,20 +215,27 @@\n  false, \n+(\n high\n+-low) \n %0A%09%7D%0A%09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-36-38",
+            "content": "@@ -215,19 +215,20 @@\n  false, \n-low\n+high\n %0A%09%7D%0A%09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_10-36-48",
+            "content": "@@ -215,18 +215,19 @@\n  false, \n-()\n+low\n %0A%09%7D%0A%09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_14-23-06",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BinarySearch(high, low, value int, slice []int) (bool, int){\n\tif high >= len(slice) || low >= len(slice) ||\n\thigh < 0 || low < 0 {\n\t\treturn false, ()\n\t}\n\tif high == low {\n\t\treturn true, high-low\n\t}\n\tvar newHigh, newLow int\n\tif slice[high-low] == value {\n\t\treturn true, high-low\n\t}\n\tif slice[high-low]  > value {\n\t\tnewHigh = high/2\n\t}\n\tif slice[high-low]  < value {\n\t\tnewLow = low*2\n\t}\n\n\treturn BinarySearch(newHigh, newLow, value, slice)\n}\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t_, _ = slice, value\n\t\n\treturn BinarySearch(len(slice)-1, 0, value, slice)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "56"
+        }
+    ]
+}

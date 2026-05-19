@@ -1,0 +1,7 @@
+2026-04-30 13:44:29, MOVE, v:1, k:ed@prin_list1, mode:DOWN
+2026-04-30 13:44:31, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-04-30 13:44:35, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-04-30 13:46:31, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-04-30 13:53:57, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:172, fail:COMP
+2026-04-30 13:54:06, EXEC, v:1, k:ed@prin_list1, mode:FULL, rate:0, size:171
+2026-04-30 13:55:33, MOVE, v:1, k:ed@prin_list1, mode:BACK
