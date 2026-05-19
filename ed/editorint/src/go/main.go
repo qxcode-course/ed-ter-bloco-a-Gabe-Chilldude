@@ -68,8 +68,12 @@ func (e *Editor) KeyBackspace() {
 			return
 		} else if e.line != e.lines.Front() {
 			e.KeyUp()
-			e.lines.Erase(e.line.Next())
-			e.KeyBackspace()
+			e.cursor = e.line.Value.End()
+			if e.line.Next().Value.Size() == 0 {
+				e.lines.Erase(e.line.Next())
+			} else {
+				e.KeyBackspace()
+			}
 		}
 }
 
