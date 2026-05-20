@@ -10,4 +10,5 @@ Sinta-se à vontade para organizar seus rascunhos em subpastas dentro do sandbox
 <!--autoload_cluster=.-->
 - [ ]`@user_001 `[princesa](user_001/README.md)
 - [ ]`@user_002 `[linkedList](user_002/README.md)
+- [ ]`@user_003 `[queimadaplus](user_003/README.md)
 

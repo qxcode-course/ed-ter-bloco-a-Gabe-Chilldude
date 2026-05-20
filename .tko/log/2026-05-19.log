@@ -60,3 +60,9 @@
 2026-05-19 09:14:17, EXEC, v:1, k:ed@editorint, mode:FREE
 2026-05-19 09:15:26, EXEC, v:1, k:ed@editorint, mode:FREE
 2026-05-19 09:16:06, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-19 10:18:39, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-19 10:18:40, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:172, fail:COMP
+2026-05-19 10:18:41, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-19 10:19:11, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-19 10:19:12, EXEC, v:1, k:ed@bettersearch, mode:FULL, fail:COMP
+2026-05-19 10:19:14, MOVE, v:1, k:ed@bettersearch, mode:BACK

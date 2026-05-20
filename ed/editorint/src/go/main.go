@@ -31,12 +31,6 @@ func (e *Editor) KeyLeft() {
 	}
 }
 
-func (e *Editor) KeyEnter() {
-	e.lines.Insert(e.line.next, NewList[rune]())
-	e.line = e.line.Next()
-	e.cursor = e.line.Value.Front()
-}
-
 func (e *Editor) KeyRight() {
 	if e.cursor !=  e.line.Value.End(){ 
 		e.cursor = e.cursor.Next()
@@ -60,6 +54,16 @@ func (e *Editor) KeyDown() {
 		e.line = e.line.Next()
 		e.cursor = e.line.Value.Front()
 	}
+}
+
+func (e *Editor) KeyEnter() {
+	e.lines.Insert(e.line.Next(), NewList[rune]())
+	for i := e.cursor; i != e.line.Value.End(); i = i.Next() {
+		e.line.Value.Erase(i)
+		e.line.Next().Value.PushBack(i.Value)
+	}
+
+	e.KeyDown()
 }
 
 func (e *Editor) KeyBackspace() {

@@ -20,12 +20,13 @@ sources:
   quests: null
 expanded:
 - ed@list
+- sandbox@sandbox
 flags:
   inbox: all
   panel: help
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@editorint
-selected_index: 15
+selected: sandbox@user_003
+selected_index: 3
