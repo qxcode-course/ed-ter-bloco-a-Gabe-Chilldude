@@ -1,0 +1,20 @@
+2026-06-02 13:51:59, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 13:52:01, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0, size:109
+2026-06-02 13:59:14, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 14:28:53, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-06-02 14:28:55, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:76
+2026-06-02 14:28:56, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-06-02 14:32:32, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 14:32:33, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0
+2026-06-02 14:32:35, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 14:32:42, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 14:34:51, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 14:37:35, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 14:37:36, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0, size:109
+2026-06-02 14:37:47, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:109
+2026-06-02 14:37:46, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-02 14:37:46, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-02 14:39:16, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 14:39:53, SELF, v:1, k:ed@cercado, self:1, rate:100, study:120
+2026-06-02 14:42:09, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 14:45:47, MOVE, v:1, k:ed@cercado, mode:BACK

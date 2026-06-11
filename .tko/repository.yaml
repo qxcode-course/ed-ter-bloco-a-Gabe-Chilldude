@@ -19,14 +19,14 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
 - sandbox@sandbox
+- ed@linear
 flags:
   inbox: all
-  panel: help
+  panel: skills
   show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: sandbox@user_003
-selected_index: 3
+selected: ed@linear
+selected_index: 11
