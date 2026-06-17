@@ -1,0 +1,19 @@
+2026-06-16 12:22:18, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-16 12:22:20, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-16 12:22:21, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-16 12:22:21, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-06-16 12:29:11, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-16 12:29:18, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-06-16 12:29:27, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-16 12:29:46, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-16 12:29:47, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-16 12:29:18, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-16 12:29:18, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-16 12:29:18, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-16 12:29:18, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-16 13:18:01, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-16 13:19:28, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-16 13:19:29, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:11
+2026-06-16 13:19:30, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-16 14:29:33, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-16 14:29:33, MOVE, v:1, k:ed@distancia, mode:EDIT

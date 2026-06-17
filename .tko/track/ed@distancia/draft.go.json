@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-16_13-19-29",
+            "content": "package main\nimport \"fmt\"\n\n// estrategia : valores temporarios\n// na ida construir um array de indices ocupados ( que n\u00e3o possuem .) e na volta testar todos os indices com \n// diferen\u00e7a >=3 do indice atual e mudar desta maneira\n// o complicado \u00e9 pegar o valor ...\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "lines": "11"
+        }
+    ]
+}

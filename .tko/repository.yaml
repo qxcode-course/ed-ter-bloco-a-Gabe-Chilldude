@@ -19,14 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- sandbox@sandbox
-- ed@linear
+- ed@backtrack
 flags:
   inbox: all
-  panel: skills
-  show_panel: 'true'
+  panel: graph
   task_graph_mode: time
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@linear
-selected_index: 11
+selected: ed@tree
+selected_index: 14

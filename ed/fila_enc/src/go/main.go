@@ -45,15 +45,20 @@ func (q *Queue[T]) IsEmpty() bool {
 }
 
 func (q *Queue[T]) Dequeue() (T, bool) {
-	if q.IsEmpty() {
-		var r T
-		return r, false
+	var value T
+	if q.IsEmpty() {  // se vazio
+		return value, false
 	}
-	if q.head.next != nil {
-		q.head = q.head.next
+	if q.head.next == nil { // se mais de um elemento
+		q.head = &Node[T] {}
+		q.tail = nil
+		return value, true
+
 	}
+	q.head = q.head.next
+	value = q.head.Value
 	q.size -- 
-	return q.head.next.Value, true
+	return value, true
 }
 
 func (q *Queue[T]) Peek() (T, bool) {

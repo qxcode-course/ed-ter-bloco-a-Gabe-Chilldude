@@ -1,0 +1,169 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_15-21-08",
+            "content": "@@ -22,26 +22,11 @@\n (%0A%09%22\n-bufio%22%0A%09%22fmt%22%0A%09%22os\n+fmt\n %22%0A)%0A\n@@ -32,18 +32,22 @@\n %0A%0Atype P\n-os\n+artida\n  struct \n@@ -53,118 +53,127 @@\n  %7B%0A%09\n-l int%0A%09c int%0A%7D%0A%0Afunc burnTrees(grid %5B%5D%5B%5D\n+plyr rune%0A%09pnts int%0A%7D%0A%0Afunc vencedor(participantes Queue%5B\n rune\n+%5D\n , \n-l, c \n+pontos Queue%5B\n int\n+%5D\n ) \n-%7B%0A%09stack := NewStack%5BPos%5D()%0A%0A%09stack.Push(Pos%7Bl:l,c:c%7D)\n+rune%7B%0A%09_,_ = participantes, pontos %0A\n %0A%09fo\n@@ -183,34 +183,49 @@\n  = 0\n+ \n ; \n-!stack.IsEmpty()\n+participantes.items.Len() %3E 1 \n ; _ = 0 \n  %7B%0A%09\n@@ -224,727 +224,527 @@\n = 0 \n- \n %7B%0A%09%09\n-if grid%5Bl%5D%5Bc%5D == '#'\n+al := &Partida\n  %7B%0A\n-%0A\n %09%09%09\n-grid%5Bl%5D%5Bc%5D = 'o'%0A%09%09%09stack.Push(Pos%7Bl:l+1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l-1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c+1%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c-1%7D)%0A%09%09%7D%0A%09%7D%0A%09// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09line := scanner.Text()%0A%09var nl, nc, lfire, cfire int%0A%09fmt.Sscanf(line, %22%25d %25d %25d %25d%22, &nl, &nc, &lfire, &cfire)%0A%0A%09grid := make(%5B%5D%5B%5Drune, 0, nl)\n+plyr : participantes.Dequeue(),%0A%09%09%09pnts : pontos.Dequeue(),%0A%09%09%7D%0A%09%09br := &Partida %7B%0A%09%09%09plyr : participantes.Dequeue(),%0A%09%09%09pnts : pontos.Dequeue(),%0A%09%09%7D%0A%0A%09%09if al.pnts %3E br.pnts %7B%0A%09%09%09participantes.Enqueue(al.plyr)%0A%09%09%7D else %7B%0A%09%09%09participantes.Enqueue(br.plyr)%0A%09%09%7D%0A%09%7D%0A%0A%09return participantes.Dequeue()%0A%7D%0A%0Afunc main() %7B%0A%09// fila de participantes%0A%09participantes := NewQueue%5Brune%5D()%0A%09var a rune = 65%0A%09for range(16) %7B%0A%09%09participantes.Enqueue(a)%0A%09%09a ++%0A%09%7D%0A%0A%09// recebe pontua%C3%A7%C3%B5es%0A%09pontos := NewQueue%5Bint%5D() %0A\n %0A%09fo\n@@ -754,234 +754,160 @@\n ange\n- nl\n+(15)\n  %7B%0A%09%09\n-scanner\n+var a int%0A%09%09fmt\n .Scan(\n+&a\n )%0A%09%09\n-line := %5B%5Drune(scanner.Text())%0A%09%09grid = append(grid, line)%0A%09%7D%0A%09burnTrees(grid, lfire, cfire)%0A%09showGrid(grid)%0A%7D%0A%0Afunc showGrid(mat %5B%5D%5B%5Drune) %7B%0A%09for _, linha := range mat %7B%0A%09%09fmt.Println(string(linha))%0A%09%7D\n+pontos.Enqueue(a)%0A%09%09fmt.Scan(&a)%0A%09%09pontos.Enqueue(a)%0A%09%7D%0A%09w := vencedor(*participantes,*pontos)%0A%09fmt.Printf(%22%25c%5Cn%22, w)\n %0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-11_15-51-26",
+            "content": "@@ -214,31 +214,8 @@\n   %7B%0A\n-%09%09fmt.Println(%22asdas%22)%0A\n %09%09if\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-11_15-52-01",
+            "content": "@@ -175,31 +175,8 @@\n c%7D)%0A\n-%09%09fmt.Println(%22asdas%22)%0A\n %09for\n@@ -210,16 +210,39 @@\n  = 0  %7B%0A\n+%09%09fmt.Println(%22asdas%22)%0A\n %09%09if gri\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-52-10",
+            "content": "@@ -171,16 +171,39 @@\n l,c:c%7D)%0A\n+%09%09fmt.Println(%22asdas%22)%0A\n %09for _ =\n@@ -1047,39 +1047,16 @@\n ine)%0A%09%7D%0A\n-%09%09fmt.Println(%22asdas%22)%0A\n %09burnTre\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-52-24",
+            "content": "@@ -731,31 +731,8 @@\n ) %7B%0A\n-%09%09fmt.Println(%22asdas%22)%0A\n %09sca\n@@ -1024,16 +1024,39 @@\n ine)%0A%09%7D%0A\n+%09%09fmt.Println(%22asdas%22)%0A\n %09burnTre\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-52-35",
+            "content": "@@ -727,16 +727,17 @@\n ain() %7B%0A\n+%09\n %09fmt.Pri\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-52-42",
+            "content": "@@ -119,18 +119,16 @@\n int) %7B%0A%09\n-//\n stack :=\n@@ -145,16 +145,254 @@\n Pos%5D()%0A%0A\n+%09stack.Push(Pos%7Bl:l,c:c%7D)%0A%09for _ = 0; !stack.IsEmpty(); _ = 0  %7B%0A%09%09if grid%5Bl%5D%5Bc%5D == '#' %7B%0A%0A%09%09%09grid%5Bl%5D%5Bc%5D = 'o'%0A%09%09%09stack.Push(Pos%7Bl:l+1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l-1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c+1%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c-1%7D)%0A%09%09%7D%0A%09%7D%0A\n %09// Essa\n@@ -727,16 +727,38 @@\n ain() %7B%0A\n+%09fmt.Println(%22asdas%22)%0A\n %09scanner\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-54-06",
+            "content": "@@ -119,16 +119,18 @@\n int) %7B%0A%09\n+//\n stack :=\n@@ -151,283 +151,8 @@\n ()%0A%0A\n-%09stack.Push(Pos%7Bl:l,c:c%7D)%0A%09for _ = 0; !stack.IsEmpty(); _ = 0  %7B%0A%09%09pos := stack.Pop()%0A%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == '#' %7B%0A%0A%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09stack.Push(Pos%7Bl:l+1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l-1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c+1%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c-1%7D)%0A%09%09%7D%0A%09%7D%0A\n %09// \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-11_15-55-36",
+            "content": "@@ -184,17 +184,16 @@\n _ = 0; !\n-(\n stack.Is\n@@ -199,17 +199,16 @@\n sEmpty()\n-)\n ; _ = 0 \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-56-00",
+            "content": "@@ -239,15 +239,191 @@\n )%0A%09%09\n-_ = pos\n+if grid%5Bpos.l%5D%5Bpos.c%5D == '#' %7B%0A%0A%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09stack.Push(Pos%7Bl:l+1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l-1,c:c%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c+1%7D)%0A%09%09%09stack.Push(Pos%7Bl:l,c:c-1%7D)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-11_15-56-12",
+            "content": "@@ -218,269 +218,36 @@\n %7B%0A%09%09\n-fmt.Println(stack.Top)%0A%09%09pos := stack.Pop()%0A%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == '#' %7B%0A%0A%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A%09%09%09stack.Push(Pos%7Bl:pos.l-1,c:pos.c%7D)%0A%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c+1%7D)%0A%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c-1%7D)%0A%09%09%7D\n+pos := stack.Pop()%0A%09%09_ = pos\n %0A%09%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-11_15-57-42",
+            "content": "@@ -235,18 +235,16 @@\n tack.Top\n-()\n )%0A%09%09pos \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-11_15-58-03",
+            "content": "@@ -212,16 +212,43 @@\n  = 0  %7B%0A\n+%09%09fmt.Println(stack.Top())%0A\n %09%09pos :=\n@@ -322,16 +322,168 @@\n %5D = 'o'%0A\n+%09%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A%09%09%09stack.Push(Pos%7Bl:pos.l-1,c:pos.c%7D)%0A%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c+1%7D)%0A%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c-1%7D)%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-11_15-58-10",
+            "content": "@@ -299,46 +299,8 @@\n 'o'%0A\n-%09%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A\n %09%09%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-11_15-58-16",
+            "content": "@@ -295,16 +295,54 @@\n %5D = 'o'%0A\n+%09%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-11_15-58-41",
+            "content": "@@ -299,36 +299,8 @@\n 'o'%0A\n-%09%09%09fmt.Println(stack.Top())%0A\n %09%09%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-11_15-58-54",
+            "content": "@@ -320,12 +320,13 @@\n ack.\n-data\n+Top()\n )%0A%09%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-11_15-59-18",
+            "content": "@@ -237,90 +237,8 @@\n p()%0A\n-%09%09if pos.l %3E= 0 && pos.l %3C len(grid) &&%0A%09%09%09pos.c %3E= 0 && pos.c %3C len(grid%5B0%5D) %7B%0A%09%09\n %09%09if\n@@ -267,18 +267,16 @@\n  '#' %7B%0A%0A\n-%09%09\n %09%09%09grid%5B\n@@ -302,172 +302,32 @@\n %0A%09%09%09\n-%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l-1,c:pos.c%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c+1%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c-1%7D)%0A%09%09%09%09%7D%0A%09\n+fmt.Println(stack.data)%0A\n %09%09%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-11_16-02-20",
+            "content": "@@ -85,63 +85,164 @@\n unc \n-inside%5BT comparable%5D\n+burnTrees\n (grid\n+ \n %5B%5D%5B%5D\n-T, pos Pos)  bool%7B%0A%09return\n+rune, l, c int) %7B%0A%09stack := NewStack%5BPos%5D()%0A%0A%09stack.Push(Pos%7Bl:l,c:c%7D)%0A%09for _ = 0; !(stack.IsEmpty()); _ = 0  %7B%0A%09%09pos := stack.Pop()%0A%09%09if\n  pos\n@@ -246,16 +246,17 @@\n pos.l %3E=\n+ \n 0 && pos\n@@ -272,17 +272,20 @@\n grid) &&\n- \n+%0A%09%09%09\n pos.c %3E=\n@@ -314,185 +314,104 @@\n %5B0%5D)\n-%0A%7D%0A%0Afunc match%5BT comparable%5D(grid%5B%5D%5B%5DT, pos Pos, value T) bool%7B%0A%09return inside(grid, pos) && grid%5Bpos.l%5D%5Bpos.c%5D == value%0A%7D%0A%0Afunc getNeigh(pos Pos) %5B%5DPos%7B%0A%09return %5B%5D\n+ %7B%0A%09%09%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == '#' %7B%0A%0A%09%09%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09%09%09stack.Push(\n Pos\n- %7B\n %7Bl:pos.l\n ,c:p\n@@ -406,24 +406,26 @@\n %7Bl:pos.l\n++1\n ,c:pos.c\n +1%7D, %7Bl:\n@@ -420,21 +420,38 @@\n os.c\n-+1%7D, \n+%7D)%0A%09%09%09%09%09stack.Push(Pos\n %7Bl:pos.l\n +1,c\n@@ -438,33 +438,33 @@\n Push(Pos%7Bl:pos.l\n-+\n+-\n 1,c:pos.c%7D, %7Bl:p\n@@ -457,18 +457,37 @@\n c:pos.c%7D\n-, \n+)%0A%09%09%09%09%09stack.Push(Pos\n %7Bl:pos.l\n@@ -498,21 +498,40 @@\n os.c\n--1%7D, \n++1%7D)%0A%09%09%09%09%09stack.Push(Pos\n %7Bl:pos.l\n -1,c\n@@ -526,26 +526,24 @@\n %7Bl:pos.l\n--1\n ,c:pos.c\n %7D%7D%0A%7D%0A%0Afu\n@@ -538,739 +538,357 @@\n os.c\n-%7D%7D%0A%7D%0A%0Afunc Alter%5BT rune%5D(grid %5B%5D%5B%5DT, pos Pos, value T) %5B%5D%5B%5DT%7B%0A%09newGrid := grid%0A%09newGrid%5Bpos.l%5D%5Bpos.c%5D = value%0A%0A%09return newGrid%0A%7D%0A%0Afunc search(grid %5B%5D%5B%5Drune, pos0, posF Pos) %7B%0A%09caminhos := NewStack%5BPos%5D()%0A%09becos := NewStack%5BPos%5D()%0A%09%0A%09for _=0 ; !caminhos.IsEmpty(); _=0 %7B%0A%09%09cur := caminhos.Pop()%0A%09%09grid = Alter(grid, cur, '.')%0A%09%09if cur == posF %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09valid := make(%5B%5DPos, 0)%0A%09%09%0A%09%09neigh := getNeigh(cur)%0A%09%09for i  := range neigh %7B%0A%09%09%09if !match(grid, neigh%5Bi%5D, '.') && !match(grid, neigh%5Bi%5D, '#') %7B%0A%09%09%09%09valid = append(valid, neigh%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if len(valid) %3E 0 %7B%0A%09%09%09caminhos.Push(valid%5B0%5D)%0A%09%09%7D else %7B%0A%09%09%09becos.Push(cur)%0A%09%09%7D%0A%09%7D%0A%0A%09for _=0 ; !becos.IsEmpty(); _=0 %7B%0A%09%09cur := becos.Pop()%0A%09%09grid = Alter(grid, cur, ' ')%0A%09%7D\n+-1%7D)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%7D%0A%09// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A\n %0A%7D%0A%0A\n-%0A\n func\n@@ -953,21 +953,20 @@\n Scan()%0A%09\n-nl_nc\n+line\n  := scan\n@@ -987,16 +987,30 @@\n r nl, nc\n+, lfire, cfire\n  int%0A%09fm\n@@ -1022,19 +1022,24 @@\n anf(\n-nl_nc\n+line\n , %22%25d \n+%25d %25d \n %25d%22,\n@@ -1047,17 +1047,34 @@\n &nl, &nc\n-)\n+, &lfire, &cfire)%0A\n %0A%09grid :\n@@ -1093,40 +1093,20 @@\n une,\n+ 0,\n  nl)%0A\n-%0A%09// L%C3%AA a gridriz%0A%09for i :=\n+%09for\n  ran\n@@ -1136,16 +1136,14 @@\n )%0A%09%09\n-grid%5Bi%5D \n+line :\n = %5B%5D\n@@ -1168,360 +1168,117 @@\n ))%0A%09\n-%7D%0A%0A%09// Procura posi%C3%A7%C3%B5es de in%C3%ADcio e endPos e conserta para _%0A%09var startPos, endPos Pos%0A%09for l := range nl %7B%0A%09%09for c := range nc %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 'I' %7B%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = ' '%0A%09%09%09%09startPos = Pos%7Bl, c%7D%0A%09%09%09%7D%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 'F' %7B%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = ' '%0A%09%09%09%09endPos = Pos%7Bl, c%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09search(grid, startPos, endPos)%0A%0A%09// Imprime o labirinto final\n+%09grid = append(grid, line)%0A%09%7D%0A%09burnTrees(grid, lfire, cfire)%0A%09showGrid(grid)%0A%7D%0A%0Afunc showGrid(mat %5B%5D%5B%5Drune) %7B\n %0A%09fo\n@@ -1285,17 +1285,18 @@\n r _, lin\n-e\n+ha\n  := rang\n@@ -1297,20 +1297,19 @@\n = range \n-grid\n+mat\n  %7B%0A%09%09fmt\n@@ -1327,17 +1327,18 @@\n ring(lin\n-e\n+ha\n ))%0A%09%7D%0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-06-11_19-32-41",
+            "content": "@@ -1092,16 +1092,106 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09for _=0 ; !becos.IsEmpty(); _=0 %7B%0A%09%09cur := becos.Pop()%0A%09%09grid = Alter(grid, cur, ' ')%0A%09%7D%0A\n %7D%0A%0A%0Afunc\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-06-11_19-32-52",
+            "content": "@@ -568,64 +568,8 @@\n alue\n-%0A%09fmt.Println(value)%0A%09fmt.Println(newGrid%5Bpos.l%5D%5Bpos.c%5D)\n %0A%0A%09r\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-11_19-33-53",
+            "content": "@@ -564,16 +564,72 @@\n  = value\n+%0A%09fmt.Println(value)%0A%09fmt.Println(newGrid%5Bpos.l%5D%5Bpos.c%5D)\n %0A%0A%09retur\n@@ -747,29 +747,8 @@\n )%0A%09%0A\n-%09caminhos.Push(pos0)%0A\n %09for\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-06-11_19-35-15",
+            "content": "@@ -1051,18 +1051,16 @@\n  0 %7B%0A%09%09%09\n-//\n caminhos\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-06-11_19-35-35",
+            "content": "@@ -1051,16 +1051,18 @@\n  0 %7B%0A%09%09%09\n+//\n caminhos\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-06-11_19-35-39",
+            "content": "@@ -1117,99 +1117,8 @@\n %09%7D%0A%0A\n-%09for _=0 ; !becos.IsEmpty(); _=0 %7B%0A%09%09cur := becos.Pop()%0A%09%09grid = Alter(grid, cur, ' ')%0A%09%7D%0A%0A\n %7D%0A%0A%0A\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-06-11_19-36-41",
+            "content": "@@ -1117,33 +1117,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(becos.data)%0A\n %09for\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-11_19-36-55",
+            "content": "@@ -1052,35 +1052,8 @@\n 0 %7B%0A\n-%09%09%09for i := range valid %7B%0A%09\n %09%09%09c\n@@ -1071,25 +1071,20 @@\n h(valid%5B\n-i\n+0\n %5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D else\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-11_19-39-17",
+            "content": "@@ -1048,16 +1048,43 @@\n ) %3E 0 %7B%0A\n+%09%09%09for i := range valid %7B%0A%09\n %09%09%09camin\n@@ -1098,20 +1098,25 @@\n h(valid%5B\n-0\n+i\n %5D)%0A\n+%09%09%09%7D%0A\n %09%09%7D else\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-06-11_19-39-54",
+            "content": "@@ -1052,35 +1052,8 @@\n 0 %7B%0A\n-%09%09%09for i := range valid %7B%0A%09\n %09%09%09c\n@@ -1071,25 +1071,20 @@\n h(valid%5B\n-i\n+0\n %5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D else\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-11_19-39-59",
+            "content": "@@ -85,164 +85,63 @@\n unc \n-burnTrees\n+inside%5BT comparable%5D\n (grid\n- \n %5B%5D%5B%5D\n-rune, l, c int) %7B%0A%09stack := NewStack%5BPos%5D()%0A%0A%09stack.Push(Pos%7Bl:l,c:c%7D)%0A%09for _ = 0; !(stack.IsEmpty()); _ = 0  %7B%0A%09%09pos := stack.Pop()%0A%09%09if\n+T, pos Pos)  bool%7B%0A%09return\n  pos\n@@ -145,17 +145,16 @@\n pos.l %3E=\n- \n 0 && pos\n@@ -170,20 +170,17 @@\n grid) &&\n-%0A%09%09%09\n+ \n pos.c %3E=\n@@ -209,104 +209,185 @@\n %5B0%5D)\n- %7B%0A%09%09%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == '#' %7B%0A%0A%09%09%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09%09%09stack.Push(\n+%0A%7D%0A%0Afunc match%5BT comparable%5D(grid%5B%5D%5B%5DT, pos Pos, value T) bool%7B%0A%09return inside(grid, pos) && grid%5Bpos.l%5D%5Bpos.c%5D == value%0A%7D%0A%0Afunc getNeigh(pos Pos) %5B%5DPos%7B%0A%09return %5B%5D\n Pos\n+ %7B\n %7Bl:pos.l\n +1,c\n@@ -386,18 +386,16 @@\n os.l\n-+1\n ,c:pos.c\n %7D)%0A%09\n@@ -394,38 +394,21 @@\n os.c\n-%7D)%0A%09%09%09%09%09stack.Push(Pos\n++1%7D, \n %7Bl:pos.l\n -1,c\n@@ -403,17 +403,17 @@\n %7Bl:pos.l\n--\n++\n 1,c:pos.\n@@ -414,37 +414,18 @@\n c:pos.c%7D\n-)%0A%09%09%09%09%09stack.Push(Pos\n+, \n %7Bl:pos.l\n@@ -436,40 +436,21 @@\n os.c\n-+1%7D)%0A%09%09%09%09%09stack.Push(Pos\n+-1%7D, \n %7Bl:pos.l\n ,c:p\n@@ -445,24 +445,26 @@\n %7Bl:pos.l\n+-1\n ,c:pos.c\n -1%7D)%0A%09%09%09\n@@ -459,357 +459,818 @@\n os.c\n--1%7D)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%7D%0A%09// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha\n+%7D%7D%0A%7D%0A%0Afunc Alter%5BT rune%5D(grid %5B%5D%5B%5DT, pos Pos, value T) %5B%5D%5B%5DT%7B%0A%09newGrid := grid%0A%09newGrid%5Bpos.l%5D%5Bpos.c%5D = value%0A%0A%09return newGrid%0A%7D%0A%0Afunc search(grid %5B%5D%5B%5Drune, pos0, posF Pos) %7B%0A%09caminhos := NewStack%5BPos%5D()%0A%09becos := NewStack%5BPos%5D()%0A%09%0A%09caminhos.Push(pos0)%0A%09for _=0 ; !caminhos.IsEmpty(); _=0 %7B%0A%09%09cur := caminhos.Pop()%0A%09%09grid = Alter(grid, cur, '.')%0A%09%09if cur == posF %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09valid := make(%5B%5DPos, 0)%0A%09%09%0A%09%09neigh := getNeigh(cur)%0A%09%09for i  := range neigh %7B%0A%09%09%09if !match(grid, neigh%5Bi%5D, '.') && !match(grid, neigh%5Bi%5D, '#') %7B%0A%09%09%09%09valid = append(valid, neigh%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if len(valid) %3E 0 %7B%0A%09%09%09for i := range valid %7B%0A%09%09%09%09caminhos.Push(valid%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09becos.Push(cur)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(becos.data)%0A%09for _=0 ; !becos.IsEmpty(); _=0 %7B%0A%09%09cur := becos.Pop()%0A%09%09grid = Alter(grid, cur, ' ')%0A%09%7D\n %0A%0A%7D%0A%0A\n+%0A\n func\n@@ -1335,20 +1335,21 @@\n Scan()%0A%09\n-line\n+nl_nc\n  := scan\n@@ -1370,30 +1370,16 @@\n r nl, nc\n-, lfire, cfire\n  int%0A%09fm\n@@ -1391,24 +1391,19 @@\n anf(\n-line\n+nl_nc\n , %22%25d \n-%25d %25d \n %25d%22,\n@@ -1415,26 +1415,9 @@\n  &nc\n-, &lfire, &cfire)%0A\n+)\n %0A%09gr\n@@ -1440,20 +1440,40 @@\n une,\n- 0,\n  nl)%0A\n-%09for\n+%0A%09// L%C3%AA a gridriz%0A%09for i :=\n  ran\n@@ -1503,14 +1503,16 @@\n )%0A%09%09\n-line :\n+grid%5Bi%5D \n = %5B%5D\n@@ -1537,117 +1537,360 @@\n ))%0A%09\n-%09grid = append(grid, line)%0A%09%7D%0A%09burnTrees(grid, lfire, cfire)%0A%09showGrid(grid)%0A%7D%0A%0Afunc showGrid(mat %5B%5D%5B%5Drune) %7B\n+%7D%0A%0A%09// Procura posi%C3%A7%C3%B5es de in%C3%ADcio e endPos e conserta para _%0A%09var startPos, endPos Pos%0A%09for l := range nl %7B%0A%09%09for c := range nc %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 'I' %7B%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = ' '%0A%09%09%09%09startPos = Pos%7Bl, c%7D%0A%09%09%09%7D%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 'F' %7B%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = ' '%0A%09%09%09%09endPos = Pos%7Bl, c%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09search(grid, startPos, endPos)%0A%0A%09// Imprime o labirinto final\n %0A%09fo\n@@ -1897,18 +1897,17 @@\n r _, lin\n-ha\n+e\n  := rang\n@@ -1908,19 +1908,20 @@\n = range \n-mat\n+grid\n  %7B%0A%09%09fmt\n@@ -1943,10 +1943,9 @@\n (lin\n-ha\n+e\n ))%0A%09\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-06-11_19-45-04",
+            "content": "@@ -18,19 +18,34 @@\n ort (%0A%09%22\n-fmt\n+bufio%22%0A%09%22fmt%22%0A%09%22os\n %22%0A)%0A%0Atyp\n@@ -47,22 +47,18 @@\n %0A%0Atype P\n-artida\n+os\n  struct \n@@ -64,127 +64,118 @@\n  %7B%0A%09\n-plyr rune%0A%09pnts int%0A%7D%0A%0Afunc vencedor(participantes Queue%5Brune%5D, pontos Queue%5B\n+l int%0A%09c int%0A%7D%0A%0Afunc burnTrees(grid %5B%5D%5B%5Drune, l, c \n int\n-%5D\n ) \n-rune%7B%0A%09_,_ = participantes, pontos %0A\n+%7B%0A%09stack := NewStack%5BPos%5D()%0A%0A%09stack.Push(Pos%7Bl:l,c:c%7D)\n %0A%09fo\n@@ -185,49 +185,36 @@\n  = 0\n- \n ; \n-participantes.items.Len() %3E 1 \n+!(stack.IsEmpty())\n ; _ = 0 \n %7B%0A%09%09\n@@ -213,527 +213,895 @@\n = 0 \n+ \n %7B%0A%09%09\n-al\n+pos\n  := \n-&Partida %7B%0A%09%09%09plyr : participantes.Dequeue(),%0A%09%09%09pnts : pontos.Dequeue(),%0A%09%09%7D%0A%09%09br := &Partida\n+stack.Pop()%0A%09%09if pos.l %3E= 0 && pos.l %3C len(grid) &&%0A%09%09%09pos.c %3E= 0 && pos.c %3C len(grid%5B0%5D) %7B%0A%09%09%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == '#'\n  %7B%0A\n+%0A\n %09%09%09\n-plyr : participantes.Dequeue(),%0A%09%09%09pnts : pontos.Dequeue(),%0A%09%09%7D%0A%0A%09%09if al.pnts %3E br.pnts %7B%0A%09%09%09participantes.Enqueue(al.plyr)%0A%09%09%7D else %7B%0A%09%09%09participantes.Enqueue(br.plyr\n+%09%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l-1,c:pos.c%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c+1%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c-1%7D\n )%0A%09%09\n+%09\n+%09\n %7D%0A\n+%09%09\n %09%7D%0A\n-%0A%09return participantes.Dequeue()%0A%7D%0A%0Afunc main() %7B%0A%09// fila de participantes%0A%09participantes := NewQueue%5Brune%5D()%0A%09var a rune = 65%0A%09for range(16) %7B%0A%09%09participantes.Enqueue(a)%0A%09%09a ++%0A%09%7D%0A%0A%09// recebe pontua%C3%A7%C3%B5es%0A%09pontos := NewQueue%5Bint%5D() %0A\n+%09%7D%0A%09// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09line := scanner.Text()%0A%09var nl, nc, lfire, cfire int%0A%09fmt.Sscanf(line, %22%25d %25d %25d %25d%22, &nl, &nc, &lfire, &cfire)%0A%0A%09grid := make(%5B%5D%5B%5Drune, 0, nl)\n %0A%09fo\n@@ -1111,160 +1111,234 @@\n ange\n-(15)\n+ nl\n  %7B%0A%09%09\n-var a int%0A%09%09fmt\n+scanner\n .Scan(\n-&a\n )%0A%09%09\n-pontos.Enqueue(a)%0A%09%09fmt.Scan(&a)%0A%09%09pontos.Enqueue(a)%0A%09%7D%0A%09w := vencedor(*participantes,*pontos)%0A%09fmt.Printf(%22%25c%5Cn%22, w)\n+line := %5B%5Drune(scanner.Text())%0A%09%09grid = append(grid, line)%0A%09%7D%0A%09burnTrees(grid, lfire, cfire)%0A%09showGrid(grid)%0A%7D%0A%0Afunc showGrid(mat %5B%5D%5B%5Drune) %7B%0A%09for _, linha := range mat %7B%0A%09%09fmt.Println(string(linha))%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-06-11_19-45-14",
+            "content": "@@ -22,26 +22,11 @@\n (%0A%09%22\n-bufio%22%0A%09%22fmt%22%0A%09%22os\n+fmt\n %22%0A)%0A\n@@ -32,18 +32,22 @@\n %0A%0Atype P\n-os\n+artida\n  struct \n@@ -53,118 +53,127 @@\n  %7B%0A%09\n-l int%0A%09c int%0A%7D%0A%0Afunc burnTrees(grid %5B%5D%5B%5D\n+plyr rune%0A%09pnts int%0A%7D%0A%0Afunc vencedor(participantes Queue%5B\n rune\n+%5D\n , \n-l, c \n+pontos Queue%5B\n int\n+%5D\n ) \n-%7B%0A%09stack := NewStack%5BPos%5D()%0A%0A%09stack.Push(Pos%7Bl:l,c:c%7D)\n+rune%7B%0A%09_,_ = participantes, pontos %0A\n %0A%09fo\n@@ -183,36 +183,49 @@\n  = 0\n+ \n ; \n-!(stack.IsEmpty())\n+participantes.items.Len() %3E 1 \n ; _ = 0 \n  %7B%0A%09\n@@ -224,895 +224,527 @@\n = 0 \n- \n %7B%0A%09%09\n-pos\n+al\n  := \n-stack.Pop()%0A%09%09if pos.l %3E= 0 && pos.l %3C len(grid) &&%0A%09%09%09pos.c %3E= 0 && pos.c %3C len(grid%5B0%5D) %7B%0A%09%09%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == '#'\n+&Partida %7B%0A%09%09%09plyr : participantes.Dequeue(),%0A%09%09%09pnts : pontos.Dequeue(),%0A%09%09%7D%0A%09%09br := &Partida\n  %7B%0A\n-%0A%09\n %09%09%09\n-%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l+1,c:pos.c%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l-1,c:pos.c%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c+1%7D)%0A%09%09%09%09%09stack.Push(Pos%7Bl:pos.l,c:pos.c-1%7D\n+plyr : participantes.Dequeue(),%0A%09%09%09pnts : pontos.Dequeue(),%0A%09%09%7D%0A%0A%09%09if al.pnts %3E br.pnts %7B%0A%09%09%09participantes.Enqueue(al.plyr)%0A%09%09%7D else %7B%0A%09%09%09participantes.Enqueue(br.plyr\n )%0A%09%09\n-%09\n-%09\n %7D%0A\n-%09%09\n %09%7D%0A\n-%09%7D%0A%09// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09line := scanner.Text()%0A%09var nl, nc, lfire, cfire int%0A%09fmt.Sscanf(line, %22%25d %25d %25d %25d%22, &nl, &nc, &lfire, &cfire)%0A%0A%09grid := make(%5B%5D%5B%5Drune, 0, nl)\n+%0A%09return participantes.Dequeue()%0A%7D%0A%0Afunc main() %7B%0A%09// fila de participantes%0A%09participantes := NewQueue%5Brune%5D()%0A%09var a rune = 65%0A%09for range(16) %7B%0A%09%09participantes.Enqueue(a)%0A%09%09a ++%0A%09%7D%0A%0A%09// recebe pontua%C3%A7%C3%B5es%0A%09pontos := NewQueue%5Bint%5D() %0A\n %0A%09fo\n@@ -754,234 +754,160 @@\n ange\n- nl\n+(15)\n  %7B%0A%09%09\n-scanner\n+var a int%0A%09%09fmt\n .Scan(\n+&a\n )%0A%09%09\n-line := %5B%5Drune(scanner.Text())%0A%09%09grid = append(grid, line)%0A%09%7D%0A%09burnTrees(grid, lfire, cfire)%0A%09showGrid(grid)%0A%7D%0A%0Afunc showGrid(mat %5B%5D%5B%5Drune) %7B%0A%09for _, linha := range mat %7B%0A%09%09fmt.Println(string(linha))%0A%09%7D\n+pontos.Enqueue(a)%0A%09%09fmt.Scan(&a)%0A%09%09pontos.Enqueue(a)%0A%09%7D%0A%09w := vencedor(*participantes,*pontos)%0A%09fmt.Printf(%22%25c%5Cn%22, w)\n %0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-11_19-45-18",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\n\tstack.Push(Pos{l:l,c:c})\n\tfor _ = 0; !(stack.IsEmpty()); _ = 0  {\n\t\tpos := stack.Pop()\n\t\tif pos.l >= 0 && pos.l < len(grid) &&\n\t\t\tpos.c >= 0 && pos.c < len(grid[0]) {\n\t\t\t\tif grid[pos.l][pos.c] == '#' {\n\n\t\t\t\t\tgrid[pos.l][pos.c] = 'o'\n\t\t\t\t\tstack.Push(Pos{l:pos.l+1,c:pos.c})\n\t\t\t\t\tstack.Push(Pos{l:pos.l-1,c:pos.c})\n\t\t\t\t\tstack.Push(Pos{l:pos.l,c:pos.c+1})\n\t\t\t\t\tstack.Push(Pos{l:pos.l,c:pos.c-1})\n\t\t\t\t}\n\t\t\t}\n\t}\n\t// Essa fun\u00e7\u00e3o deve usar uma list como pilha\n\t// e marcar as \u00e1rvores na matriz como queimados\n\t// Uma sugest\u00e3o de como fazer isso \u00e9:\n\t// - adicionar a primeira posi\u00e7\u00e3o na pilha\n\t// - enquanto a pilha n\u00e3o estiver vazia:\n\t//   - retirar o elemento do topo\n\t//   - se puder ser queimado, queime e adicione seus vizinhos \u00e0 pilha\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "63"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_20-32-20",
+            "content": "@@ -854,31 +854,8 @@\n 0)%0A%0A\n-%09%09fmt.Println(%22asdsa%22)%0A\n %09%09fo\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-11_20-35-02",
+            "content": "@@ -850,16 +850,39 @@\n os, 0)%0A%0A\n+%09%09fmt.Println(%22asdsa%22)%0A\n %09%09for _,\n@@ -969,39 +969,16 @@\n , '.')%7B%0A\n-%09%09fmt.Println(%22asdsa%22)%0A\n %09%09%09%09vali\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-11_20-35-13",
+            "content": "@@ -906,17 +906,20 @@\n h(grid, \n-i\n+topo\n , '#')  \n@@ -938,17 +938,20 @@\n id, \n-i\n+topo\n , '.')%7B%0A\n %09%09%09%09\n@@ -946,16 +946,39 @@\n , '.')%7B%0A\n+%09%09fmt.Println(%22asdsa%22)%0A\n %09%09%09%09vali\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-11_20-36-43",
+            "content": "@@ -748,17 +748,17 @@\n caminho.\n-T\n+P\n op()%0A%0A%09%09\n@@ -1089,25 +1089,8 @@\n po)%0A\n-%09%09%09caminho.Pop()%0A\n %09%09%7D%0A\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-11_20-44-36",
+            "content": "@@ -1110,77 +1110,12 @@\n %09%09%7D%0A\n-%09%7D\n %0A%0A%09\n-for !beco.IsEmpty() %7B%0A%09%09grid = Alter(grid, beco.Pop(), ' ')%0A%09%7D%0A%0A\n+%7D\n %0A%7D%0A%0A\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-11_20-45-27",
+            "content": "@@ -661,122 +661,33 @@\n s%5D()\n- // stack que representa o caminho da solul%C3%A7%C3%A3o%0A%09beco := NewStack%5BPos%5D() // stack que representa caminhos sem sa%C3%ADda\n+%0A%09beco := NewStack%5BPos%5D()\n %0A%0A%09c\n@@ -704,17 +704,16 @@\n h(pos0)%0A\n-%0A\n %09for !ca\n@@ -757,69 +757,8 @@\n op()\n-%0A%09%09// aqui deve ser usado Stack.Top() ao inv%C3%A9s de Stack.Pop()\n %0A%0A%09%09\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-11_21-39-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\nfunc inside[T comparable](grid[][]T, pos Pos)  bool{\n\treturn pos.l >=0 && pos.l < len(grid) && pos.c >= 0 && pos.c < len(grid[0])\n}\n\nfunc match[T comparable](grid[][]T, pos Pos, value T) bool{\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == value\n}\n\nfunc getNeigh(pos Pos) []Pos{\n\treturn []Pos {{l:pos.l,c:pos.c+1}, {l:pos.l+1,c:pos.c}, {l:pos.l,c:pos.c-1}, {l:pos.l-1,c:pos.c}}\n}\n\nfunc Alter[T rune](grid [][]T, pos Pos, value T) [][]T{\n\tnewGrid := grid\n\tnewGrid[pos.l][pos.c] = value\n\n\treturn newGrid\n}\n\nfunc search(grid [][]rune, pos0, posF Pos) {\n\tcaminho := NewStack[Pos]() // stack que representa o caminho da solul\u00e7\u00e3o\n\tbeco := NewStack[Pos]() // stack que representa caminhos sem sa\u00edda\n\n\tcaminho.Push(pos0)\n\n\tfor !caminho.IsEmpty() {\n\t\ttopo := caminho.Top()\n\t\t// aqui deve ser usado Stack.Top() ao inv\u00e9s de Stack.Pop()\n\n\t\tgrid := Alter(grid, topo, '.')\n\n\t\tif topo == posF {\n\t\t\tbreak\n\t\t}\n\n\t\tvalid := make([]Pos, 0)\n\n\t\tfor _, i := range getNeigh(topo) {\n\t\t\tif !match(grid, i, '#')  && !match(grid, i, '.'){\n\t\t\t\tvalid = append(valid, i)\n\t\t\t}\n\t\t}\n\n\t\tif len(valid) > 0 {\n\t\t\tfor _, i := range valid {\n\t\t\t\tcaminho.Push(i)\n\t\t\t}\n\t\t} else {\n\t\t\tbeco.Push(topo)\n\t\t\tcaminho.Pop()\n\t\t}\n\t}\n\n\tfor !beco.IsEmpty() {\n\t\tgrid = Alter(grid, beco.Pop(), ' ')\n\t}\n\n\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "110"
+        }
+    ]
+}
